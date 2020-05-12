@@ -4,8 +4,8 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 
-# ds = 'https://media.githubusercontent.com/media/pedrombnevoa/dv/master/globalterrorismdb_0718dist.csv'
-ds = os.getcwd() + '\globalterrorismdb_0718dist.csv'
+ds = 'https://media.githubusercontent.com/media/pedrombnevoa/dv/master/globalterrorismdb_0718dist.csv'
+#ds = os.getcwd() + '\globalterrorismdb_0718dist.csv'
 
 fields = ['eventid', 'iyear', 'country_txt', 'region_txt', 'city', 'latitude', 'longitude', 'nkill']
 
