@@ -16,7 +16,7 @@ app = dash.Dash(__name__)
 server = app.server
 
 app.layout = html.Div(children=[
-    html.H1(children='Test1'),
+    html.H1(children='Test2'),
 
     html.Div(children='''
         Example of html Container
