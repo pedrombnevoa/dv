@@ -7,8 +7,8 @@ import plotly.graph_objects as go
 import numpy as np
 import random
 
-ds = 'https://media.githubusercontent.com/media/pedrombnevoa/dv/master/globalterrorismdb_0718dist.csv'
-# ds = os.getcwd() + '\globalterrorismdb_0718dist.csv'
+ds = 'https://archive.org/download/globalterrorismdb_0718dist/globalterrorismdb_0718dist.csv'
+#ds = os.getcwd() + '\globalterrorismdb_0718dist.csv'
 
 fields = ['eventid', 'iyear', 'country', 'country_txt', 'region_txt', 'city', 'latitude', 'longitude', 'nkill']
 
