@@ -1,14 +1,11 @@
 import pandas as pd
-import os
+import plotly.graph_objects as go
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
-import plotly.graph_objects as go
-import numpy as np
-import random
 
 ds = 'https://archive.org/download/globalterrorismdb_0718dist/globalterrorismdb_0718dist.csv'
-#ds = os.getcwd() + '\globalterrorismdb_0718dist.csv'
+# ds = os.getcwd() + '\globalterrorismdb_0718dist.csv'
 
 fields = ['eventid', 'iyear', 'country', 'country_txt', 'region_txt', 'city', 'latitude', 'longitude', 'nkill']
 
@@ -23,7 +20,7 @@ df = df.loc[df['nkill'] > 0]
 
 data_slider = []
 
-for year in df.iyear.unique():
+for i, year in enumerate(df.iyear.unique()):
     df_year = df[(df['iyear'] == year)]
 
     data_year = dict(
@@ -35,6 +32,7 @@ for year in df.iyear.unique():
         zmax=15000,
         zmin=0,
         locationmode='country names',
+        visible=True if i == 0 else False,
         colorbar=dict(
             len=0.5,
             thickness=10,
@@ -48,7 +46,8 @@ for year in df.iyear.unique():
             ),
             tickfont=dict(
                 family='Arial',
-                size=12),
+                size=12
+            ),
         )
     )
 
@@ -88,7 +87,10 @@ layout = dict(
 fig = go.Figure(data=data_slider, layout=layout)
 
 fig.update_layout(
-    font=dict(family='Arial', size=12),
+    font=dict(
+        family='Arial',
+        size=12
+    ),
     autosize=False,
     width=1250,
     height=750,
