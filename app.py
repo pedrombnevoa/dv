@@ -5,6 +5,7 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 import os
+import Stacked as stacked
 
 ds = os.getcwd() + '\globalterrorismdb_0718dist.csv'
 
@@ -126,6 +127,7 @@ app.layout = html.Div(children=[
     dcc.Graph(
         id='fig',
         figure=fig
+
     ),
     dcc.Graph(id='timeseries',
               config={'displayModeBar': False},
@@ -134,12 +136,16 @@ app.layout = html.Div(children=[
                              x='Year',
                              y='NumDeaths',
                              color='Organization',
-                             template='plotly_dark').update_layout(
-                                       {'plot_bgcolor': 'rgba(0, 0, 0, 0)',
-                                        'paper_bgcolor': 'rgba(0, 0, 0, 0)'})
-                                        )
-])
+                             template='plotly_dark')
+                                        ),
+    dcc.Graph(id='bar_plot',
+              figure=stacked.figure
 
+)
+
+])
 
 if __name__ == '__main__':
     app.run_server(debug=True)
+
+
