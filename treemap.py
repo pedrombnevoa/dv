@@ -4,7 +4,6 @@ import dash_html_components as html
 import pandas as pd
 import plotly.express as px
 from dash.dependencies import Input, Output
-from dash_html_components import H1
 
 app = dash.Dash()
 server = app.server
@@ -23,11 +22,9 @@ fig = px.treemap(df_year,
 ##Layout
 app.layout = html.Div([
 
-    H1('Type of Weapons Most Used'),
-
     dcc.Graph(figure=fig, id='mytree'),
 
-    html.Label('Year Slider'),
+    html.Label('Year'),
     dcc.Slider(
         id='year_slider',
         min=1970,
@@ -48,11 +45,10 @@ def update_graph(value):
     fig = px.treemap(df_year,
                      path=['year', 'weapon_type'],
                      values='quantity', title='Type of Weapons Most Used',
-                     width=500, height=500,
+                     width=500, height=500
                      )
 
     return [fig]
-
 
 if __name__ == '__main__':
     app.run_server(debug=True)
