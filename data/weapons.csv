@@ -1,0 +1,401 @@
+﻿year,weapon_type,quantity
+1970,Chemical,3
+1970,Explosives,338
+1970,Firearms,81
+1970,Incendiary,176
+1970,Melee,2
+1970,Sabotage Equipment,1
+1970,Unknown,49
+1970,Vehicle,1
+1971,Chemical,1
+1971,Explosives,246
+1971,Firearms,102
+1971,Incendiary,92
+1971,Melee,2
+1971,Unknown,28
+1972,Explosives,271
+1972,Fake Weapons,1
+1972,Firearms,248
+1972,Incendiary,23
+1972,Melee,5
+1972,Unknown,20
+1973,Chemical,4
+1973,Explosives,162
+1973,Firearms,204
+1973,Incendiary,49
+1973,Melee,7
+1973,Unknown,47
+1974,Chemical,4
+1974,Explosives,296
+1974,Fake Weapons,1
+1974,Firearms,192
+1974,Incendiary,43
+1974,Melee,6
+1974,Radiological,1
+1974,Unknown,38
+1975,Chemical,3
+1975,Explosives,376
+1975,Firearms,251
+1975,Incendiary,75
+1975,Melee,3
+1975,Unknown,32
+1976,Chemical,3
+1976,Explosives,415
+1976,Firearms,278
+1976,Incendiary,157
+1976,Melee,13
+1976,Other,1
+1976,Unknown,56
+1977,Chemical,2
+1977,Explosives,640
+1977,Firearms,317
+1977,Incendiary,264
+1977,Melee,7
+1977,Unknown,89
+1978,Chemical,9
+1978,Explosives,657
+1978,Firearms,452
+1978,Incendiary,209
+1978,Melee,19
+1978,Sabotage Equipment,2
+1978,Unknown,178
+1979,Chemical,4
+1979,Explosives,1091
+1979,Fake Weapons,1
+1979,Firearms,869
+1979,Incendiary,214
+1979,Melee,18
+1979,Other,4
+1979,Radiological,1
+1979,Sabotage Equipment,2
+1979,Unknown,457
+1979,Vehicle,1
+1980,Chemical,2
+1980,Explosives,986
+1980,Fake Weapons,1
+1980,Firearms,1133
+1980,Incendiary,173
+1980,Melee,9
+1980,Other,1
+1980,Unknown,357
+1981,Biological,2
+1981,Explosives,1068
+1981,Firearms,1061
+1981,Incendiary,145
+1981,Melee,6
+1981,Sabotage Equipment,5
+1981,Unknown,299
+1982,Explosives,1114
+1982,Firearms,939
+1982,Incendiary,190
+1982,Melee,20
+1982,Other,2
+1982,Sabotage Equipment,1
+1982,Unknown,278
+1983,Explosives,1230
+1983,Firearms,1189
+1983,Incendiary,119
+1983,Melee,14
+1983,Unknown,318
+1984,Biological,4
+1984,Chemical,4
+1984,Explosives,1677
+1984,Firearms,1173
+1984,Incendiary,191
+1984,Melee,24
+1984,Other,1
+1984,Sabotage Equipment,6
+1984,Unknown,412
+1984,Vehicle,3
+1985,Chemical,2
+1985,Explosives,1478
+1985,Firearms,940
+1985,Incendiary,154
+1985,Melee,11
+1985,Radiological,1
+1985,Unknown,328
+1985,Vehicle,1
+1986,Chemical,2
+1986,Explosives,1464
+1986,Firearms,809
+1986,Incendiary,173
+1986,Melee,22
+1986,Sabotage Equipment,2
+1986,Unknown,387
+1986,Vehicle,1
+1987,Chemical,3
+1987,Explosives,1431
+1987,Firearms,1232
+1987,Incendiary,171
+1987,Melee,12
+1987,Sabotage Equipment,2
+1987,Unknown,331
+1987,Vehicle,1
+1988,Chemical,3
+1988,Explosives,1655
+1988,Firearms,1705
+1988,Incendiary,170
+1988,Melee,24
+1988,Other,1
+1988,Sabotage Equipment,3
+1988,Unknown,159
+1988,Vehicle,1
+1989,Chemical,4
+1989,Explosives,1869
+1989,Fake Weapons,1
+1989,Firearms,1947
+1989,Incendiary,316
+1989,Melee,91
+1989,Other,1
+1989,Sabotage Equipment,1
+1989,Unknown,93
+1989,Vehicle,1
+1990,Biological,2
+1990,Chemical,3
+1990,Explosives,1783
+1990,Firearms,1666
+1990,Incendiary,290
+1990,Melee,91
+1990,Other,1
+1990,Sabotage Equipment,4
+1990,Unknown,46
+1990,Vehicle,1
+1991,Chemical,4
+1991,Explosives,2033
+1991,Fake Weapons,2
+1991,Firearms,2015
+1991,Incendiary,391
+1991,Melee,102
+1991,Other,5
+1991,Unknown,127
+1991,Vehicle,4
+1992,Chemical,6
+1992,Explosives,1758
+1992,Firearms,2146
+1992,Incendiary,539
+1992,Melee,255
+1992,Other,9
+1992,Sabotage Equipment,4
+1992,Unknown,350
+1992,Vehicle,4
+1994,Chemical,7
+1994,Explosives,1170
+1994,Fake Weapons,2
+1994,Firearms,1287
+1994,Incendiary,288
+1994,Melee,162
+1994,Other,2
+1994,Unknown,534
+1994,Vehicle,4
+1995,Chemical,13
+1995,Explosives,805
+1995,Fake Weapons,5
+1995,Firearms,1103
+1995,Incendiary,507
+1995,Melee,186
+1995,Other,2
+1995,Sabotage Equipment,2
+1995,Unknown,458
+1996,Explosives,1235
+1996,Fake Weapons,6
+1996,Firearms,872
+1996,Incendiary,368
+1996,Melee,97
+1996,Unknown,477
+1996,Vehicle,3
+1997,Chemical,5
+1997,Explosives,1133
+1997,Fake Weapons,1
+1997,Firearms,997
+1997,Incendiary,212
+1997,Melee,212
+1997,Unknown,635
+1997,Vehicle,2
+1998,Chemical,14
+1998,Explosives,527
+1998,Fake Weapons,1
+1998,Firearms,245
+1998,Incendiary,63
+1998,Melee,44
+1998,Sabotage Equipment,2
+1998,Unknown,38
+1999,Chemical,9
+1999,Explosives,639
+1999,Firearms,436
+1999,Incendiary,147
+1999,Melee,50
+1999,Other,13
+1999,Sabotage Equipment,1
+1999,Unknown,99
+1999,Vehicle,1
+2000,Biological,1
+2000,Chemical,7
+2000,Explosives,942
+2000,Fake Weapons,1
+2000,Firearms,550
+2000,Incendiary,135
+2000,Melee,55
+2000,Other,1
+2000,Radiological,10
+2000,Sabotage Equipment,2
+2000,Unknown,110
+2001,Biological,17
+2001,Chemical,10
+2001,Explosives,819
+2001,Firearms,736
+2001,Incendiary,139
+2001,Melee,59
+2001,Other,1
+2001,Sabotage Equipment,4
+2001,Unknown,116
+2001,Vehicle,5
+2002,Chemical,10
+2002,Explosives,724
+2002,Firearms,419
+2002,Incendiary,83
+2002,Melee,35
+2002,Other,2
+2002,Unknown,59
+2002,Vehicle,1
+2003,Biological,2
+2003,Chemical,16
+2003,Explosives,701
+2003,Fake Weapons,2
+2003,Firearms,389
+2003,Incendiary,89
+2003,Melee,29
+2003,Other,1
+2003,Sabotage Equipment,2
+2003,Unknown,45
+2003,Vehicle,2
+2004,Biological,1
+2004,Chemical,2
+2004,Explosives,685
+2004,Firearms,379
+2004,Incendiary,30
+2004,Melee,15
+2004,Unknown,53
+2004,Vehicle,1
+2005,Biological,1
+2005,Chemical,1
+2005,Explosives,1074
+2005,Fake Weapons,1
+2005,Firearms,737
+2005,Incendiary,72
+2005,Melee,35
+2005,Sabotage Equipment,1
+2005,Unknown,95
+2006,Explosives,1518
+2006,Firearms,974
+2006,Incendiary,95
+2006,Melee,60
+2006,Other,2
+2006,Sabotage Equipment,1
+2006,Unknown,106
+2006,Vehicle,2
+2007,Chemical,9
+2007,Explosives,1875
+2007,Firearms,1105
+2007,Incendiary,87
+2007,Melee,58
+2007,Other,2
+2007,Radiological,1
+2007,Sabotage Equipment,11
+2007,Unknown,94
+2008,Chemical,9
+2008,Explosives,2755
+2008,Fake Weapons,1
+2008,Firearms,1309
+2008,Incendiary,262
+2008,Melee,104
+2008,Other,4
+2008,Sabotage Equipment,10
+2008,Unknown,350
+2008,Vehicle,1
+2009,Chemical,8
+2009,Explosives,2670
+2009,Firearms,1266
+2009,Incendiary,352
+2009,Melee,72
+2009,Other,5
+2009,Sabotage Equipment,8
+2009,Unknown,338
+2009,Vehicle,2
+2010,Biological,1
+2010,Chemical,8
+2010,Explosives,2715
+2010,Fake Weapons,2
+2010,Firearms,1368
+2010,Incendiary,274
+2010,Melee,99
+2010,Sabotage Equipment,7
+2010,Unknown,349
+2010,Vehicle,3
+2011,Biological,1
+2011,Chemical,1
+2011,Explosives,2754
+2011,Fake Weapons,1
+2011,Firearms,1630
+2011,Incendiary,211
+2011,Melee,123
+2011,Other,2
+2011,Sabotage Equipment,18
+2011,Unknown,331
+2011,Vehicle,4
+2012,Chemical,15
+2012,Explosives,5412
+2012,Firearms,2493
+2012,Incendiary,264
+2012,Melee,55
+2012,Other,2
+2012,Sabotage Equipment,4
+2012,Unknown,273
+2012,Vehicle,4
+2013,Biological,3
+2013,Chemical,14
+2013,Explosives,7266
+2013,Firearms,3660
+2013,Incendiary,504
+2013,Melee,100
+2013,Other,7
+2013,Sabotage Equipment,5
+2013,Unknown,475
+2013,Vehicle,2
+2014,Chemical,18
+2014,Explosives,9521
+2014,Fake Weapons,2
+2014,Firearms,5040
+2014,Incendiary,640
+2014,Melee,214
+2014,Other,14
+2014,Sabotage Equipment,1
+2014,Unknown,1443
+2014,Vehicle,10
+2015,Chemical,23
+2015,Explosives,8380
+2015,Firearms,3953
+2015,Incendiary,703
+2015,Melee,388
+2015,Other,8
+2015,Sabotage Equipment,10
+2015,Unknown,1466
+2015,Vehicle,34
+2016,Chemical,29
+2016,Explosives,7603
+2016,Firearms,3481
+2016,Incendiary,630
+2016,Melee,333
+2016,Other,10
+2016,Sabotage Equipment,8
+2016,Unknown,1480
+2016,Vehicle,13
+2017,Chemical,27
+2017,Explosives,5465
+2017,Fake Weapons,1
+2017,Firearms,3146
+2017,Incendiary,656
+2017,Melee,307
+2017,Other,10
+2017,Sabotage Equipment,11
+2017,Unknown,1254
+2017,Vehicle,23
