@@ -1,0 +1,504 @@
+Region,Year,NumDeathsPerYear,NumAttack
+Australasia & Oceania,1970,0,1
+Central America & Caribbean,1970,3,7
+East Asia,1970,,2
+Eastern Europe,1970,0,12
+Middle East & North Africa,1970,1,28
+North America,1970,27,472
+South America,1970,11,65
+South Asia,1970,4,1
+Southeast Asia,1970,41,10
+Sub-Saharan Africa,1970,1,3
+Western Europe,1970,75,50
+Australasia & Oceania,1971,0,2
+Central America & Caribbean,1971,0,12
+East Asia,1971,25,3
+Eastern Europe,1971,,17
+Middle East & North Africa,1971,6,83
+North America,1971,20,719
+South America,1971,6,89
+Southeast Asia,1971,2,16
+Sub-Saharan Africa,1971,1,5
+Western Europe,1971,106,175
+Australasia & Oceania,1972,1,10
+Central America & Caribbean,1972,0,15
+Eastern Europe,1972,26,18
+Middle East & North Africa,1972,7,136
+North America,1972,9,792
+South America,1972,6,122
+South Asia,1972,0,2
+Southeast Asia,1972,84,32
+Sub-Saharan Africa,1972,0,9
+Western Europe,1972,385,551
+Australasia & Oceania,1973,,11
+Central America & Caribbean,1973,0,21
+East Asia,1973,0,5
+Eastern Europe,1973,1,19
+Middle East & North Africa,1973,5,155
+North America,1973,29,856
+South America,1973,16,205
+South Asia,1973,0,3
+Southeast Asia,1973,0,34
+Sub-Saharan Africa,1973,5,13
+Western Europe,1973,224,841
+Australasia & Oceania,1974,0,12
+Central America & Caribbean,1974,0,32
+East Asia,1974,1,9
+Eastern Europe,1974,1,21
+Middle East & North Africa,1974,35,197
+North America,1974,14,967
+South America,1974,21,286
+South Asia,1974,0,5
+Southeast Asia,1974,5,37
+Sub-Saharan Africa,1974,2,20
+Western Europe,1974,406,1158
+Central America & Caribbean,1975,17,41
+East Asia,1975,0,21
+Middle East & North Africa,1975,42,241
+North America,1975,46,1126
+South America,1975,130,341
+South Asia,1975,6,9
+Southeast Asia,1975,1,44
+Sub-Saharan Africa,1975,28,32
+Western Europe,1975,254,1596
+Central America & Caribbean,1976,84,86
+East Asia,1976,2,23
+Middle East & North Africa,1976,29,296
+North America,1976,29,1251
+South America,1976,95,432
+South Asia,1976,0,13
+Southeast Asia,1976,34,56
+Sub-Saharan Africa,1976,5,43
+Western Europe,1976,289,2174
+Central America & Caribbean,1977,34,110
+East Asia,1977,,27
+Eastern Europe,1977,1,23
+Middle East & North Africa,1977,37,507
+North America,1977,15,1400
+South America,1977,45,551
+South Asia,1977,0,15
+Southeast Asia,1977,1,64
+Sub-Saharan Africa,1977,17,72
+Western Europe,1977,177,2945
+Australasia & Oceania,1978,2,14
+Central America & Caribbean,1978,140,309
+East Asia,1978,1,62
+Eastern Europe,1978,4,25
+Middle East & North Africa,1978,660,635
+North America,1978,15,1517
+South America,1978,93,773
+South Asia,1978,1,17
+Southeast Asia,1978,132,108
+Sub-Saharan Africa,1978,108,118
+Western Europe,1978,204,3674
+Australasia & Oceania,1979,0,16
+Central America & Caribbean,1979,410,918
+East Asia,1979,5,78
+Eastern Europe,1979,0,26
+Middle East & North Africa,1979,285,1090
+North America,1979,22,1596
+South America,1979,145,1009
+South Asia,1979,89,51
+Southeast Asia,1979,224,194
+Sub-Saharan Africa,1979,283,242
+Western Europe,1979,255,4694
+Australasia & Oceania,1980,0,23
+Central America & Caribbean,1980,2874,1988
+East Asia,1980,0,79
+Eastern Europe,1980,0,27
+Middle East & North Africa,1980,325,1527
+North America,1980,18,1671
+South America,1980,195,1328
+South Asia,1980,27,63
+Southeast Asia,1980,118,281
+Sub-Saharan Africa,1980,59,300
+Western Europe,1980,272,5289
+Australasia & Oceania,1981,1,26
+Central America & Caribbean,1981,2939,3136
+East Asia,1981,0,83
+Eastern Europe,1981,0,31
+Middle East & North Africa,1981,661,1839
+North America,1981,6,1748
+South America,1981,389,1711
+South Asia,1981,34,86
+Southeast Asia,1981,160,331
+Sub-Saharan Africa,1981,54,398
+Western Europe,1981,163,5773
+Australasia & Oceania,1982,0,28
+Central America & Caribbean,1982,3173,4132
+East Asia,1982,1,86
+Eastern Europe,1982,2,34
+Middle East & North Africa,1982,457,2129
+North America,1982,12,1834
+South America,1982,555,2350
+South Asia,1982,65,106
+Southeast Asia,1982,138,374
+Sub-Saharan Africa,1982,62,458
+Western Europe,1982,152,6175
+Central America & Caribbean,1983,5144,4990
+East Asia,1983,3,99
+Eastern Europe,1983,,36
+Middle East & North Africa,1983,744,2463
+North America,1983,7,1881
+South America,1983,2103,3300
+South Asia,1983,64,169
+Southeast Asia,1983,120,396
+Sub-Saharan Africa,1983,421,564
+Western Europe,1983,149,6650
+Australasia & Oceania,1984,12,39
+Central America & Caribbean,1984,4569,5671
+East Asia,1984,0,114
+Eastern Europe,1984,3,40
+Middle East & North Africa,1984,134,2731
+North America,1984,8,1948
+South America,1984,2544,4792
+South Asia,1984,401,413
+Southeast Asia,1984,198,442
+Sub-Saharan Africa,1984,634,690
+Western Europe,1984,152,7191
+Australasia & Oceania,1985,0,46
+Central America & Caribbean,1985,2603,6451
+East Asia,1985,2,124
+Eastern Europe,1985,2,45
+Middle East & North Africa,1985,711,2864
+North America,1985,331,1992
+South America,1985,1591,5832
+South Asia,1985,617,574
+Southeast Asia,1985,378,570
+Sub-Saharan Africa,1985,186,831
+Western Europe,1985,166,7657
+Australasia & Oceania,1986,1,50
+Central America & Caribbean,1986,702,6844
+East Asia,1986,8,136
+Eastern Europe,1986,1,48
+Middle East & North Africa,1986,357,3060
+North America,1986,0,2045
+South America,1986,1222,7016
+South Asia,1986,931,847
+Southeast Asia,1986,251,672
+Sub-Saharan Africa,1986,769,1016
+Western Europe,1986,152,8112
+Australasia & Oceania,1987,0,53
+Central America & Caribbean,1987,1016,7410
+East Asia,1987,1,146
+Eastern Europe,1987,0,49
+Middle East & North Africa,1987,499,3262
+North America,1987,1,2080
+South America,1987,1299,8281
+South Asia,1987,1877,1195
+Southeast Asia,1987,389,835
+Sub-Saharan Africa,1987,600,1190
+Western Europe,1987,188,8528
+Australasia & Oceania,1988,22,65
+Central America & Caribbean,1988,653,7905
+East Asia,1988,0,170
+Eastern Europe,1988,0,53
+Middle East & North Africa,1988,355,3508
+North America,1988,3,2110
+South America,1988,1897,9322
+South Asia,1988,2083,1996
+Southeast Asia,1988,624,1077
+Sub-Saharan Africa,1988,686,1527
+Western Europe,1988,424,9017
+Australasia & Oceania,1989,15,94
+Central America & Caribbean,1989,430,8408
+East Asia,1989,22,188
+Eastern Europe,1989,6,69
+Middle East & North Africa,1989,442,3973
+North America,1989,18,2154
+South America,1989,2211,10707
+South Asia,1989,2717,2922
+Southeast Asia,1989,599,1280
+Sub-Saharan Africa,1989,1109,1818
+Western Europe,1989,115,9461
+Australasia & Oceania,1990,12,112
+Central America & Caribbean,1990,404,8724
+East Asia,1990,4,287
+Eastern Europe,1990,59,127
+Middle East & North Africa,1990,750,4467
+North America,1990,7,2191
+South America,1990,1707,11783
+South Asia,1990,2207,3523
+Southeast Asia,1990,540,1628
+Sub-Saharan Africa,1990,607,2268
+Western Europe,1990,120,9851
+Australasia & Oceania,1991,3,122
+Central America & Caribbean,1991,696,9453
+East Asia,1991,8,316
+Eastern Europe,1991,272,211
+Middle East & North Africa,1991,528,5079
+North America,1991,13,2231
+South America,1991,2058,13105
+South Asia,1991,2222,4200
+Southeast Asia,1991,567,1834
+Sub-Saharan Africa,1991,1088,2539
+Western Europe,1991,167,10547
+Australasia & Oceania,1992,9,139
+Central America & Caribbean,1992,112,9665
+East Asia,1992,27,390
+Eastern Europe,1992,105,302
+Middle East & North Africa,1992,1766,6271
+North America,1992,8,2272
+South America,1992,1321,14309
+South Asia,1992,2102,4745
+Southeast Asia,1992,646,2113
+Sub-Saharan Africa,1992,2112,3109
+Western Europe,1992,173,11316
+Australasia & Oceania,1994,20,153
+Central America & Caribbean,1994,159,9845
+East Asia,1994,34,424
+Eastern Europe,1994,43,397
+Middle East & North Africa,1994,2018,7322
+North America,1994,89,2373
+South America,1994,365,14682
+South Asia,1994,746,5121
+Southeast Asia,1994,367,2264
+Sub-Saharan Africa,1994,1874,3541
+Western Europe,1994,100,11900
+Australasia & Oceania,1995,6,171
+Central America & Caribbean,1995,80,10013
+East Asia,1995,21,462
+Eastern Europe,1995,156,465
+Middle East & North Africa,1995,978,7912
+North America,1995,235,2467
+South America,1995,565,14937
+South Asia,1995,2035,6172
+Southeast Asia,1995,310,2432
+Sub-Saharan Africa,1995,1093,3780
+Western Europe,1995,65,12237
+Australasia & Oceania,1996,23,190
+Central America & Caribbean,1996,81,10129
+East Asia,1996,32,551
+Eastern Europe,1996,166,640
+Middle East & North Africa,1996,919,8285
+North America,1996,97,2578
+South America,1996,694,15454
+South Asia,1996,1797,6911
+Southeast Asia,1996,266,2625
+Sub-Saharan Africa,1996,2546,3997
+Western Europe,1996,42,12713
+Australasia & Oceania,1997,0,197
+Central America & Caribbean,1997,73,10246
+East Asia,1997,38,591
+Eastern Europe,1997,115,888
+Middle East & North Africa,1997,4599,8833
+North America,1997,231,2715
+South America,1997,1317,16228
+South Asia,1997,1732,7401
+Southeast Asia,1997,335,2784
+Sub-Saharan Africa,1997,2186,4276
+Western Europe,1997,40,13062
+Australasia & Oceania,1998,0,203
+Central America & Caribbean,1998,0,10247
+East Asia,1998,50,600
+Eastern Europe,1998,109,993
+Middle East & North Africa,1998,1034,9080
+North America,1998,7,2752
+South America,1998,597,16336
+South Asia,1998,1200,7537
+Southeast Asia,1998,54,2816
+Sub-Saharan Africa,1998,1405,4363
+Western Europe,1998,54,13203
+Australasia & Oceania,1999,2,207
+Central America & Caribbean,1999,3,10255
+East Asia,1999,5,604
+Eastern Europe,1999,437,1131
+Middle East & North Africa,1999,649,9396
+North America,1999,20,2808
+South America,1999,293,16470
+South Asia,1999,876,7762
+Southeast Asia,1999,123,2923
+Sub-Saharan Africa,1999,885,4506
+Western Europe,1999,12,13439
+Australasia & Oceania,2000,0,213
+Central America & Caribbean,2000,4,10269
+East Asia,2000,1,623
+Eastern Europe,2000,380,1365
+Middle East & North Africa,2000,492,9668
+North America,2000,0,2849
+South America,2000,355,16620
+South Asia,2000,1211,8119
+Southeast Asia,2000,390,3179
+Sub-Saharan Africa,2000,874,4697
+Western Europe,2000,39,13692
+Australasia & Oceania,2001,0,217
+Central America & Caribbean,2001,1,10277
+East Asia,2001,9,642
+Eastern Europe,2001,286,1617
+Middle East & North Africa,2001,744,10030
+North America,2001,3021,2897
+South America,2001,469,16849
+South Asia,2001,1135,8504
+Southeast Asia,2001,268,3364
+Sub-Saharan Africa,2001,1079,4859
+Western Europe,2001,38,13926
+Australasia & Oceania,2002,1,219
+Central America & Caribbean,2002,0,10280
+East Asia,2002,0,646
+Eastern Europe,2002,473,1729
+Middle East & North Africa,2002,972,10356
+North America,2002,4,2930
+South America,2002,286,17011
+South Asia,2002,1094,8838
+Southeast Asia,2002,372,3474
+Sub-Saharan Africa,2002,370,4980
+Western Europe,2002,7,14046
+Australasia & Oceania,2003,1,223
+Central America & Caribbean,2003,5,10288
+East Asia,2003,1,652
+Eastern Europe,2003,335,1829
+Middle East & North Africa,2003,972,10666
+North America,2003,2,2964
+South America,2003,188,17128
+South Asia,2003,751,9191
+Southeast Asia,2003,327,3619
+Sub-Saharan Africa,2003,494,5053
+Western Europe,2003,5,14167
+Central America & Caribbean,2004,38,10293
+East Asia,2004,4,656
+Eastern Europe,2004,608,1875
+Middle East & North Africa,2004,2423,11158
+North America,2004,0,2976
+South America,2004,89,17170
+South Asia,2004,1574,9560
+Southeast Asia,2004,281,3714
+Sub-Saharan Africa,2004,317,5087
+Western Europe,2004,196,14226
+Central America & Caribbean,2005,1,10296
+East Asia,2005,12,658
+Eastern Europe,2005,157,1951
+Middle East & North Africa,2005,3813,12040
+North America,2005,2,2998
+South America,2005,149,17219
+South Asia,2005,1337,10164
+Southeast Asia,2005,265,3918
+Sub-Saharan Africa,2005,370,5147
+Western Europe,2005,60,14330
+Australasia & Oceania,2006,0,225
+Central America & Caribbean,2006,7,10301
+East Asia,2006,0,659
+Eastern Europe,2006,59,2021
+Middle East & North Africa,2006,4454,13227
+North America,2006,8,3013
+South America,2006,93,17269
+South Asia,2006,2845,11102
+Southeast Asia,2006,257,4190
+Sub-Saharan Africa,2006,965,5261
+Western Europe,2006,6,14428
+Australasia & Oceania,2007,0,226
+Central America & Caribbean,2007,2,10305
+Eastern Europe,2007,57,2083
+Middle East & North Africa,2007,6979,14612
+North America,2007,25,3031
+South America,2007,83,17316
+South Asia,2007,3638,12084
+Southeast Asia,2007,375,4555
+Sub-Saharan Africa,2007,1381,5563
+Western Europe,2007,16,14500
+Australasia & Oceania,2008,0,234
+East Asia,2008,39,684
+Eastern Europe,2008,101,2292
+Middle East & North Africa,2008,3311,16148
+North America,2008,23,3062
+South America,2008,109,17460
+South Asia,2008,3316,13843
+Southeast Asia,2008,395,5069
+Sub-Saharan Africa,2008,1308,5943
+Western Europe,2008,3,14663
+Australasia & Oceania,2009,0,235
+Central America & Caribbean,2009,3,10314
+East Asia,2009,186,692
+Eastern Europe,2009,140,2457
+Middle East & North Africa,2009,2616,17509
+North America,2009,17,3078
+South America,2009,126,17619
+South Asia,2009,3424,15788
+Southeast Asia,2009,476,5630
+Sub-Saharan Africa,2009,1691,6226
+Western Europe,2009,15,14845
+Australasia & Oceania,2010,0,236
+Central America & Caribbean,2010,0,10315
+East Asia,2010,7,693
+Eastern Europe,2010,225,2718
+Middle East & North Africa,2010,2413,18971
+North America,2010,3,3102
+South America,2010,49,17767
+South Asia,2010,3292,17769
+Southeast Asia,2010,320,6103
+Sub-Saharan Africa,2010,764,6557
+Western Europe,2010,5,14978
+Central America & Caribbean,2011,2,10316
+East Asia,2011,19,697
+Eastern Europe,2011,163,2916
+Middle East & North Africa,2011,2435,20634
+North America,2011,0,3114
+South America,2011,24,17873
+South Asia,2011,3135,19907
+Southeast Asia,2011,264,6459
+Sub-Saharan Africa,2011,1076,7051
+Western Europe,2011,83,15073
+Central America & Caribbean,2012,,10317
+East Asia,2012,,701
+Eastern Europe,2012,112,3089
+Middle East & North Africa,2012,2728,23043
+North America,2012,13,3153
+South America,2012,38,18006
+South Asia,2012,4170,23710
+Southeast Asia,2012,165,7046
+Sub-Saharan Africa,2012,1386,8219
+Western Europe,2012,9,15266
+Australasia & Oceania,2013,,237
+Central America & Caribbean,2013,8,10331
+East Asia,2013,11,716
+Eastern Europe,2013,119,3254
+Middle East & North Africa,2013,5776,27603
+North America,2013,48,3185
+South America,2013,42,18188
+South Asia,2013,4222,28322
+Southeast Asia,2013,299,8234
+Sub-Saharan Africa,2013,1478,9218
+Western Europe,2013,5,15527
+Australasia & Oceania,2014,3,246
+Central America & Caribbean,2014,5,10336
+East Asia,2014,77,759
+Eastern Europe,2014,584,4216
+Middle East & North Africa,2014,10477,34542
+North America,2014,25,3222
+South America,2014,25,18471
+South Asia,2014,5191,33320
+Southeast Asia,2014,300,9316
+Sub-Saharan Africa,2014,2122,11539
+Western Europe,2014,0,15742
+Australasia & Oceania,2015,0,260
+Central America & Caribbean,2015,0,10337
+East Asia,2015,4,787
+Eastern Europe,2015,423,4900
+Middle East & North Africa,2015,9487,40578
+North America,2015,42,3284
+South America,2015,33,18647
+South Asia,2015,5164,37905
+Southeast Asia,2015,244,10388
+Sub-Saharan Africa,2015,2456,13503
+Western Europe,2015,132,16075
+Australasia & Oceania,2016,0,270
+Central America & Caribbean,2016,9,10340
+East Asia,2016,19,795
+Eastern Europe,2016,106,5034
+Middle East & North Africa,2016,9885,46693
+North America,2016,16,3359
+South America,2016,22,18806
+South Asia,2016,4417,41544
+Southeast Asia,2016,342,11465
+Sub-Saharan Africa,2016,1983,15580
+Western Europe,2016,111,16348
+Australasia & Oceania,2017,3,282
+Central America & Caribbean,2017,0,10344
+East Asia,2017,8,802
+Eastern Europe,2017,85,5144
+Middle East & North Africa,2017,5185,50473
+North America,2017,31,3456
+South America,2017,38,18978
+South Asia,2017,4597,44974
+Southeast Asia,2017,360,12485
+Sub-Saharan Africa,2017,2061,17550
+Western Europe,2017,37,16639
