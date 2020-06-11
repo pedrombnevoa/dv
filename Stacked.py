@@ -6,9 +6,9 @@ import dash_core_components as dcc
 import dash_html_components as html
 import os
 
-AttacksOverKillspath = os.getcwd() + '\globalterrorismdb_Attacks_Kills_Woumed.csv'
+AttacksOverKillspath = os.getcwd() + '\globalterrorismdb_Attacks_Kills_Wounded.csv'
 
-columns = ['Year','Attacks','Kills','Wound']
+columns = ['Year','Attacks','Kills','Wounded']
 
 AttacksOverKillsDF = pd.read_csv(AttacksOverKillspath, encoding='ISO-8859-1', usecols=columns)
 
@@ -27,8 +27,8 @@ trace2 = go.Bar(
 )
 trace3 = go.Bar(
     x=AttacksOverKillsDF['Year'],
-    y=AttacksOverKillsDF['Wound'],
-    name='Wound',
+    y=AttacksOverKillsDF['Wounded'],
+    name='Wounded',
     marker_color='rgb(255, 255, 0)'
 )
 
@@ -94,6 +94,10 @@ figure=go.Figure(
               layout=go.Layout(
               xaxis_title="Year",
               xaxis={'categoryorder':'category ascending'},
+              title_text='Balance of number of Kills, Wounded and Terrorist Attacks by Year',
+              title_xanchor='auto',
+              title_x=0.5,
               barmode='stack',
               annotations=annotations + annotations2,
               template='plotly_dark'))
+
