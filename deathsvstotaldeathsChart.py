@@ -8,6 +8,12 @@ import os
 
 
 
+killsByRegionDFPath = os.getcwd() + '\GroupedYearRegionKills.csv'
+
+columnskillsByRegion = ['Region','Year','NumDeaths']
+#Region,Year,NumDeaths
+killsByRegionDF = pd.read_csv(killsByRegionDFPath, encoding='ISO-8859-1', usecols=columnskillsByRegion)
+
 
 
 RegionYearAttackDeathsPath = os.getcwd() + '\RegionYearDeathsDeathsCom.csv'

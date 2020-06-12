@@ -9,93 +9,71 @@ import Stacked as stacked
 import numpy as np
 import map as map
 import deathsvstotaldeathsChart as deathsvstotaldeaths
+import dash_bootstrap_components as dbc
+from dash.dependencies import Input, Output
+import treemap as treemap
 
-#Miguel
 
-YearGangKillsPath = os.getcwd() + '\GroupedYearGangKills.csv'
 
-columns = ['Year','Organization','NumDeaths']
 
-killsByGangDF = pd.read_csv(YearGangKillsPath, encoding='ISO-8859-1', usecols=columns)
-
-killsByRegionDFPath = os.getcwd() + '\GroupedYearRegionKills.csv'
-
-columnskillsByRegion = ['Region','Year','NumDeaths']
-#Region,Year,NumDeaths
-killsByRegionDF = pd.read_csv(killsByRegionDFPath, encoding='ISO-8859-1', usecols=columnskillsByRegion)
-
-app = dash.Dash(__name__, assets_folder='style')
+app = dash.Dash(__name__, assets_folder='style',external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 
-app.layout = html.Div(children=[
-    # html.H1(children='Test2'),
-
-    # html.Div(children='''
-    #     Example of html Container
-    # '''),
-
-    dcc.Graph(
-        id='fig',
-        figure=map.fig
-    ),
-    dcc.Graph(id='timeseries',
-              config={'displayModeBar': False},
-              animate=True,
-              figure=px.line(killsByGangDF,
-                             x='Year',
-                             y='NumDeaths',
-                             color='Organization',
-                             template='plotly_dark').update_layout(
-                                       {'plot_bgcolor': 'rgba(0, 0, 0, 0)',
-                                        'paper_bgcolor': 'rgba(0, 0, 0, 0)'})
-                                        ),
-
-    dcc.Graph(
-            id='fig2',
-            figure=deathsvstotaldeaths.DeathOverDeathFig,
-            animate=False
+app.layout = dbc.Container([
+    dbc.Row(html.Div("TITULO"),
+            justify="start"),
+    dbc.Row(
+        [
+            dbc.Col(html.Div( "Texto fdsfsdfsdfsdfsdf"), width=3),
+            dbc.Col(
+                 dcc.Graph(
+                     id='fig',
+                     figure=map.fig
+                 )
+            , width=9)
+        ]
         ),
+    dbc.Row(
+        [
+            dbc.Col(dcc.Graph(figure=treemap.fig, id='mytree'),),
+            dbc.Col([
+                dbc.Row(
+                    dcc.Graph(id='bar_plot',figure=stacked.figure)
+                ),
+                dbc.Row(
+                    html.Div([
+                     html.Div(id='evolution-Graphs-content'),
+                     dcc.Tabs(id='evolution_Graphs', value='DeathsOverTotalDeaths', vertical=True, children=[
+                         dcc.Tab(label='DeathsOverTotalDeaths', value='DeathsOverTotalDeaths'),
+                         dcc.Tab(label='DeathsByRegion', value='DeathsByRegion'),
+                         ]),
+                        ]),
+                    )
+                ]
+                ),
 
-    dcc.Graph(id='killsByGang',
-              config={'displayModeBar': False},
-              animate=True,
-              figure=px.line(killsByGangDF,
-                             x='Year',
-                             y='NumDeaths',
-                             color='Organization',
-                             template='plotly_dark').update_layout(
-                                       {'plot_bgcolor': 'rgba(0, 0, 0, 0)',
-                                        'paper_bgcolor': 'rgba(0, 0, 0, 0)'})
-                                        ),
-    dcc.Graph(id='killsByRegion',
-              config={'displayModeBar': False},
-              animate=True,
-              figure=px.line(killsByRegionDF,
-                             x='Year',
-                             y='NumDeaths',
-                             color='Region',
-                             template='plotly_dark').update_layout(
-                                       {'plot_bgcolor': 'rgba(0, 0, 0, 0)',
-                                        'paper_bgcolor': 'rgba(0, 0, 0, 0)'})
-                                        ),
-    dcc.Graph(id='attackvsdeaths',
-              config={'displayModeBar': False},
-              animate=True,
-              figure=px.line(deathsvstotaldeaths.RegionYearAttackDeathsDF,
-                             x='NumDeathsComul',
-                             y='NumDeathsPerYear',
-                             color='Region',
-                             template='plotly_dark').update_layout(
-                                       {'plot_bgcolor': 'rgba(0, 0, 0, 0)',
-                                        'paper_bgcolor': 'rgba(0, 0, 0, 0)'})
-                                        ),
-
-    dcc.Graph(id='bar_plot',
-              figure=stacked.figure
-
-)
-
+        ]
+    )
 ])
+@app.callback(Output('evolution-Graphs-content', 'children'),
+              [Input('evolution_Graphs', 'value')])
+def render_content(tab):
+    if tab == 'DeathsOverTotalDeaths':
+        return dcc.Graph(
+                         id='fig2',
+                         figure=deathsvstotaldeaths.DeathOverDeathFig,
+                         animate=False
+                     )
+    elif tab == 'DeathsByRegion':
+        return dcc.Graph(id='killsByRegion',
+                   config={'displayModeBar': False},
+                   animate=True,
+                   figure=px.line(deathsvstotaldeaths.killsByRegionDF,
+                                  x='Year',
+                                  y='NumDeaths',
+                                  color='Region',
+                                  template='plotly_dark')
+                          )
 
 
 if __name__ == '__main__':
