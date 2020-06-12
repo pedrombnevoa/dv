@@ -186,7 +186,7 @@ fig.update_layout(
         l=25,
         r=0,
         b=100,
-        t=50,
+        t=0,
         pad=0,
     ),
     geo=dict(

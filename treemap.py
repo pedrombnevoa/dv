@@ -5,50 +5,28 @@ import pandas as pd
 import plotly.express as px
 from dash.dependencies import Input, Output
 
-app = dash.Dash()
-server = app.server
-
-##Load Data
-df = pd.read_csv("data/weapons.csv")
-df_year = df.loc[df['year'] == 1970]
-df_slide = df['year'].unique()
-
-##First Treemap
-fig = px.treemap(df_year,
-                 path=['year', 'weapon_type'],
-                 values='quantity', title='Teste',
-                 width=500, height=500,
-                 )
-##Layout
-app.layout = html.Div([
-
-    dcc.Graph(figure=fig, id='mytree'),
-
-    html.Label('Year'),
-    dcc.Slider(
-        id='year_slider',
-        min=1970,
-        max=2017,
-        marks={str(i): '{}'.format(str(i)) for i in df_slide},
-        value=1970,
-        step=1,
-        included=False
-    ),
-])
-
-
-##Callback Treemap
-@app.callback([Output('mytree', 'figure')],
-              [Input('year_slider', 'value')])
-def update_graph(value):
+def getTreemap(value=1970):
+    df = pd.read_csv("data/weapons.csv")
     df_year = df.loc[df['year'] == value]
+    df_slide = df['year'].unique()
+
     fig = px.treemap(df_year,
                      path=['year', 'weapon_type'],
-                     values='quantity', title='Type of Weapons Most Used',
+                     values='quantity', title='Teste',
                      width=500, height=500
                      )
 
-    return [fig]
+    fig.update_layout(
+        font_family="Arial",
+        margin=dict(
+            l=0,
+            r=75,
+            b=0,
+            t=0,
+            pad=0,
+        ),
+        plot_bgcolor='rgb(30,30,30)',
+        paper_bgcolor='rgb(30,30,30)',
+    )
 
-if __name__ == '__main__':
-    app.run_server(debug=True)
+    return fig

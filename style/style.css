@@ -5,3 +5,10 @@ body {
     text-align: center;
     color: #ededed;
 }
+
+.fit-image{
+width: 100%;
+object-fit: cover;
+height: 300px; /* only if you want fixed height */
+align-items: top;
+}
