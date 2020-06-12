@@ -17,8 +17,6 @@ columnsRegionYearAttackDeaths = ['Region','Year','NumDeathsPerYear','NumDeathsCo
 RegionYearAttackDeathsDF = pd.read_csv(RegionYearAttackDeathsPath, encoding='ISO-8859-1', usecols=columnsRegionYearAttackDeaths)
 
 
-
-
 years = ["1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979",
          "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989",
          "1990", "1991", "1992", "1994", "1995", "1996", "1997", "1998", "1999",
@@ -42,6 +40,8 @@ fig_dict["layout"]["xaxis"] = {"range": [0, 5], "title": "Total deaths", "type":
 fig_dict["layout"]["yaxis"] = {"range": [0, 5],"title": "Deaths last year", "type": "log", "range": [-1, 5]}
 fig_dict["layout"]["hovermode"] = "closest"
 fig_dict["layout"]["template"] = 'plotly_dark'
+fig_dict["layout"]["height"] = 700
+
 #fig_dict["layout"]["paper_bgcolor"] = 'rgba(0, 0, 0, 0)'
 #fig_dict["layout"]["plot_bgcolor"]= 'rgba(0, 0, 0, 0)'
 
@@ -79,7 +79,7 @@ fig_dict["layout"]["updatemenus"] = [
                 "label": "Log",
                 "method": "relayout",
                 "args": [
-                    {'title': 'Linear scale',
+                    {'title': 'Logarithmic  scale',
                      'yaxis': {"title": "Deaths last year", 'type': 'log', "range": [-1, 5]},
                      'xaxis': {"title": "Total deaths Log Scale", 'type': 'log', "range": [-1, 5]}}]
             },
@@ -98,7 +98,7 @@ fig_dict["layout"]["updatemenus"] = [
         "type": "buttons",
         "x": 0.1,
         "xanchor": "right",
-        "y": 2,
+        "y": 1.5,
         "yanchor": "top"
     }
 ]
@@ -134,9 +134,8 @@ for region in regions:
         "y": list(dataset_by_year_and_reg["NumDeathsPerYear"]),
         "mode": 'lines+markers',
         "text": list(dataset_by_year_and_reg["Region"]),
-        "marker": {
-            "sizemode": "area",
-            "size": 5
+        "line": {
+
         },
         "name": region
     }
@@ -155,9 +154,9 @@ for year in years:
             "y": list(dataset_by_year_and_reg["NumDeathsPerYear"]),
             "mode": 'lines',
             "text": list(dataset_by_year_and_reg["Region"]),
-            "marker": {
-                "sizemode": "area",
-                "size": 5
+            "line": {
+
+
             },
             "name": region
         }
