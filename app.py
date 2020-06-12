@@ -20,22 +20,22 @@ app = dash.Dash(__name__, assets_folder='style',external_stylesheets=[dbc.themes
 server = app.server
 
 app.layout = dbc.Container([
-    dbc.Row(html.Div("TITULO"),
-            justify="start"),
+    html.H1("Iris k-means clustering", className="w-100 text-left"),
+    #dbc.Row(dbc.Col(html.Div("Start"),width={"size": 12, "offset": 0})),
     dbc.Row(
         [
-            dbc.Col(html.Div( "Texto fdsfsdfsdfsdfsdf"), width=3),
+            dbc.Col(html.P( "Texto fdsfsdfsdfsdfsdf fsdfsdfsd  asfdasd  sadasd  asd a das das d asdasdasdasd   asdadsadasd  asdadasd ", className="text-justify"),width=3),
             dbc.Col(
                  dcc.Graph(
                      id='fig',
                      figure=map.fig
                  )
-            , width=9)
+            ,width=9)
         ]
         ),
     dbc.Row(
         [
-            dbc.Col(dcc.Graph(figure=treemap.fig, id='mytree'),),
+            dbc.Col(dcc.Graph(figure=treemap.fig, id='mytree')),
             dbc.Col([
                 dbc.Row(
                     dcc.Graph(id='bar_plot',figure=stacked.figure)
@@ -51,10 +51,11 @@ app.layout = dbc.Container([
                     )
                 ]
                 ),
+            ]
+        )
+    ]
+    ,fluid=True)
 
-        ]
-    )
-])
 @app.callback(Output('evolution-Graphs-content', 'children'),
               [Input('evolution_Graphs', 'value')])
 def render_content(tab):
