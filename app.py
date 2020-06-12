@@ -35,23 +35,22 @@ app.layout = dbc.Container([
         ),
     dbc.Row(
         [
-            dbc.Col(dcc.Graph(figure=treemap.fig, id='mytree')),
+            dbc.Col(dcc.Graph(figure=treemap.fig, id='mytree'), width=3),
             dbc.Col([
                 dbc.Row(
                     dcc.Graph(id='bar_plot',figure=stacked.figure)
                 ),
-                dbc.Row(
-                    html.Div([
+                dbc.Row([
                      html.Div(id='evolution-Graphs-content'),
                      dcc.Tabs(id='evolution_Graphs', value='DeathsOverTotalDeaths', vertical=True, children=[
                          dcc.Tab(label='DeathsOverTotalDeaths', value='DeathsOverTotalDeaths'),
                          dcc.Tab(label='DeathsByRegion', value='DeathsByRegion'),
                          ]),
-                        ]),
-                    )
-                ]
+
+                    ])
+                ], width=9
                 ),
-            ]
+            ],no_gutters=True,
         )
     ]
     ,fluid=True)
