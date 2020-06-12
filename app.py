@@ -90,9 +90,6 @@ app.layout = html.Div(children=[
                                         'paper_bgcolor': 'rgba(0, 0, 0, 0)'})
                                         ),
 
-
-                             template='plotly_dark')
-                                        ),
     dcc.Graph(id='bar_plot',
               figure=stacked.figure
 
