@@ -6,7 +6,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 import os
 
-AttacksOverKillspath = os.getcwd() + '\globalterrorismdb_Attacks_Kills_Wounded.csv'
+AttacksOverKillspath = 'https://raw.githubusercontent.com/pedrombnevoa/dv/master/globalterrorismdb_Attacks_Kills_Wounded.csv'
 columns = ['Year','Attacks','Kills','Wounded']
 AttacksOverKillsDF = pd.read_csv(AttacksOverKillspath, encoding='ISO-8859-1', usecols=columns)
 

@@ -117,7 +117,6 @@ app.layout = dbc.Container([
                 dcc.Graph(id='killsByRegion',
                     config={'displayModeBar': False},
                     animate=False,
-                    #responsive=True,
                     figure=deathsvstotaldeaths.DeathsByRegion
                           ),className='shadow-5'
                 )

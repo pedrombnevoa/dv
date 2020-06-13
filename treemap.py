@@ -5,7 +5,7 @@ import pandas as pd
 import plotly.express as px
 from dash.dependencies import Input, Output
 
-df = pd.read_csv("data/weapons.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/pedrombnevoa/dv/master/data/weapons.csv")
 df_year = df.loc[df['year'] == 1970]
 df_slide = df['year'].unique()
 

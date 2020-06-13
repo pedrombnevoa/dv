@@ -4,7 +4,8 @@ import plotly.express as px
 import os
 import numpy as np
 
-ds = os.getcwd() + '\gt_country_year_nkill_count.csv'
+ds = 'https://raw.githubusercontent.com/pedrombnevoa/dv/master/gt_country_year_nkill_count.csv'
+
 df = pd.read_csv(ds, encoding='ISO-8859-1')
 
 years = []

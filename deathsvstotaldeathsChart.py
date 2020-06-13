@@ -6,11 +6,11 @@ import dash_core_components as dcc
 import dash_html_components as html
 import os
 
-killsByRegionDFPath = os.getcwd() + '\GroupedYearRegionKills.csv'
+killsByRegionDFPath = 'https://raw.githubusercontent.com/pedrombnevoa/dv/master/GroupedYearRegionKills.csv'
 columnskillsByRegion = ['Region','Year','NumDeaths']
-killsByRegionDF = pd.read_csv(killsByRegionDFPath, encoding='ISO-8859-1', usecols=columnskillsByRegion)
+killsByRegionDF = pd.read_csv(killsByRegionDFPath, delimiter=',', encoding='ISO-8859-1', usecols=columnskillsByRegion)
 
-RegionYearAttackDeathsPath = os.getcwd() + '\RegionYearDeathsDeathsCom.csv'
+RegionYearAttackDeathsPath = 'https://raw.githubusercontent.com/pedrombnevoa/dv/master/RegionYearDeathsDeathsCom.csv'
 columnsRegionYearAttackDeaths = ['Region','Year','NumDeathsPerYear','NumDeathsComul','NumAttack']
 RegionYearAttackDeathsDF = pd.read_csv(RegionYearAttackDeathsPath, encoding='ISO-8859-1', usecols=columnsRegionYearAttackDeaths)
 
