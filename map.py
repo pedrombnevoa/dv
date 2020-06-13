@@ -44,7 +44,7 @@ fig_dict["layout"]["updatemenus"] = [
         "xanchor": "right",
         "y": 0,
         "yanchor": "top",
-        "font": {"family": "sans-serif", "color": "rgb(14, 135, 127)"}
+        "font": {"family": "sans-serif", "color": "rgb(0, 0, 0)"}
     }
 ]
 
@@ -190,7 +190,7 @@ fig.update_layout(
         b=0,
         t=0,
         pad=0,
-    ),
+    ),template= 'plotly_dark',
     geo=dict(
         scope='world',
         showcountries=True,

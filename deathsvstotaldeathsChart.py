@@ -79,7 +79,7 @@ fig_dict["layout"]["updatemenus"] = [
         "xanchor": "right",
         "y": 0,
         "yanchor": "top",
-        "font": {"color":'rgb(14, 135, 127)', "size":14}
+        "font": {"color":'rgb(0, 0, 0)', "size":14}
     },
     {
         "buttons": [
@@ -108,7 +108,7 @@ fig_dict["layout"]["updatemenus"] = [
         "xanchor": "right",
         "y": 1.7,
         "yanchor": "top",
-        "font": {"color":'rgb(14, 135, 127)', "size":14}
+        "font": {"color":'rgb(0, 0, 0)', "size":14}
     }
 ]
 
