@@ -78,7 +78,8 @@ fig_dict["layout"]["updatemenus"] = [
         "x": 0.1,
         "xanchor": "right",
         "y": 0,
-        "yanchor": "top"
+        "yanchor": "top",
+        "font": {"color":'rgb(14, 135, 127)', "size":14}
     },
     {
         "buttons": [
@@ -107,6 +108,7 @@ fig_dict["layout"]["updatemenus"] = [
         "xanchor": "right",
         "y": 1.7,
         "yanchor": "top",
+        "font": {"color":'rgb(14, 135, 127)', "size":14}
     }
 ]
 
@@ -219,7 +221,7 @@ DeathsByRegion.update_layout(
     coloraxis=dict(showscale=False),
     font=dict(
         family="Arial",
-        size=12
+        size=12,
     ),
     margin=dict(
         l=0,

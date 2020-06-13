@@ -44,7 +44,7 @@ fig_dict["layout"]["updatemenus"] = [
         "xanchor": "right",
         "y": 0,
         "yanchor": "top",
-        "font": {"family": "sans-serif", "color": "rgb(255,255,255)"}
+        "font": {"family": "sans-serif", "color": "rgb(14, 135, 127)"}
     }
 ]
 
