@@ -46,8 +46,8 @@ fig_dict["layout"]["xaxis"] = {"range": [0, 5], "title": "Total deaths", "type":
 fig_dict["layout"]["yaxis"] = {"range": [0, 5],"title": "Deaths last year", "type": "log", "range": [-1, 5]}
 fig_dict["layout"]["hovermode"] = "closest"
 fig_dict["layout"]["template"] = 'plotly_dark'
-fig_dict["layout"]["height"] = 500
-fig_dict["layout"]["width"] = 850
+fig_dict["layout"]["height"] = 600
+fig_dict["layout"]["width"] = 972
 
 #fig_dict["layout"]["paper_bgcolor"] = 'rgba(0, 0, 0, 0)'
 #fig_dict["layout"]["plot_bgcolor"]= 'rgba(0, 0, 0, 0)'
@@ -86,27 +86,27 @@ fig_dict["layout"]["updatemenus"] = [
                 "label": "Log",
                 "method": "relayout",
                 "args": [
-                    {'title': 'Logarithmic  scale',
-                     'yaxis': {"title": "Deaths last year", 'type': 'log', "range": [-1, 5]},
+                    {
+                     'yaxis': {"title": "Deaths last year Log Scale", 'type': 'log', "range": [-1, 5]},
                      'xaxis': {"title": "Total deaths Log Scale", 'type': 'log', "range": [-1, 5]}}]
             },
             {
                 "label": "Linear",
                 "method": "relayout",
                 "args": [
-                    {'title': 'Linear scale',
-                     'xaxis': {"title": "Deaths last year", 'type': 'linear', "range": [-10, 100000]},
-                     'yaxis': {"title": "Total deaths Linear Scale", 'type': 'linear', "range": [-10, 11000]}}]
+                    {
+                     'xaxis': {"title": "Deaths last year Linear Scale", 'type': 'linear', "range": [-5, 100000]},
+                     'yaxis': {"title": "Total deaths Linear Scale", 'type': 'linear', "range": [-5, 11000]}}]
             }
         ],
         "direction": "left",
-        "pad": {"r": 10, "t": 87},
+        "pad": {"r": 10, "t": 80},
         "showactive": True,
         "type": "buttons",
         "x": 0.1,
         "xanchor": "right",
-        "y": 1.5,
-        "yanchor": "top"
+        "y": 1.7,
+        "yanchor": "top",
     }
 ]
 
@@ -165,7 +165,7 @@ for year in years:
 
 
             },
-            "name": region
+            "name": region,
         }
         frame["data"].append(data_dict)
 
@@ -184,3 +184,51 @@ for year in years:
 fig_dict["layout"]["sliders"] = [sliders_dict]
 
 DeathOverDeathFig = go.Figure(fig_dict)
+
+DeathOverDeathFig.update_layout(
+    font=dict(
+        family="Arial",
+        size=12
+    ),
+    margin=dict(
+        l=0,
+        r=0,
+        b=0,
+        t=0,
+        pad=0,
+    ),
+    plot_bgcolor='rgb(30,30,30)',
+    paper_bgcolor='rgb(30,30,30)',
+    autosize=True,
+    width=970,
+    height=500,
+    title="Mortality trends by Region through time"
+)
+
+
+DeathsByRegion = px.line(killsByRegionDF,
+                        x='Year',
+                        y='NumDeaths',
+                        color='Region',
+                        title="Number of deaths by Region through time",
+                        template='plotly_dark')
+
+DeathsByRegion.update_layout(
+    coloraxis=dict(showscale=False),
+    font=dict(
+        family="Arial",
+        size=12
+    ),
+    margin=dict(
+        l=0,
+        r=0,
+        b=0,
+        t=0,
+        pad=0,
+    ),
+    plot_bgcolor='rgb(30,30,30)',
+    paper_bgcolor='rgb(30,30,30)',
+    autosize=True,
+    width=970,
+    height=500,
+)

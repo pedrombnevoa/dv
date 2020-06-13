@@ -92,9 +92,9 @@ app.layout = dbc.Container([
 
         dbc.Col([
             dbc.Row([
-                html.Div(id='evolution-Graphs-content'),
+                html.Div(id='evolution-Graphs-content', className='shadow-5', ),
                 dcc.Tabs(
-                    id='evolution_Graphs', value='DeathsOverTotalDeaths', vertical=True,
+                    id='evolution_Graphs', value='DeathsOverTotalDeaths', vertical=False,
                     children=[
                         dcc.Tab(label='DeathsOverTotalDeaths', value='DeathsOverTotalDeaths'),
                         dcc.Tab(label='DeathsByRegion', value='DeathsByRegion'),
@@ -118,12 +118,8 @@ def render_content(tab):
     elif tab == 'DeathsByRegion':
         return dcc.Graph(id='killsByRegion',
                    config={'displayModeBar': False},
-                   animate=True,
-                   figure=px.line(deathsvstotaldeaths.killsByRegionDF,
-                                  x='Year',
-                                  y='NumDeaths',
-                                  color='Region',
-                                  template='plotly_dark')
+                   animate=False,
+                   figure=deathsvstotaldeaths.DeathsByRegion
                           )
 
 # @app.callback([Output('mytree', 'figure')],
