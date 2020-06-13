@@ -30,15 +30,26 @@ app.layout = dbc.Container([
         dbc.Col()
     ]),
 
+
+
     dbc.Row([
         dbc.Col([
             dbc.Row([
-                dcc.Markdown('This dashboard offers a comprehensive insight into the numbers of terrorism around '
-                            'the world. text text text text text text text text text text text text text text ['
-                             'link](https://www.kaggle.com/START-UMD/gtd) text text text text text text text text '
-                             'text text text text text text text text text text text text text text text text'
-                             ' text text text text text text text text text text text text text text text text '
-                             'text text ', className='p-2 text-justify shadow-5')
+                dcc.Markdown(
+                    'This dashboard presents a comprehensive set of '
+                    'insights about Terrorism around the world and '
+                    'shows its evolution over the last decades, '
+                    'regarding the most affected regions, the main '
+                    'groups and organizations, the most used weapons '
+                    'that were used and how many victims occurred '
+                    'during these attacks.\n\n'
+                    'According to the FBI, Terrorism is "the unlawful '
+                    'use of force or violence against persons or '
+                    'property to intimidate or coerce a Government, ' 
+                    'the civilian population, or any segment thereof, '
+                    'in furtherance of political or social objectives.\n\n'
+                    'You can explore more of the Global Terrorism Database by visiting this [link](https://www.kaggle.com/START-UMD/gtd)'' \
+                    ', className='p-2 text-justify shadow-5')
             ], className='pl-3'),
 
             dbc.Row([
@@ -92,35 +103,59 @@ app.layout = dbc.Container([
 
         dbc.Col([
             dbc.Row([
-                html.Div(id='evolution-Graphs-content', className='shadow-5', ),
-                dcc.Tabs(
-                    id='evolution_Graphs', value='DeathsOverTotalDeaths', vertical=False,
-                    children=[
-                        dcc.Tab(label='DeathsOverTotalDeaths', value='DeathsOverTotalDeaths'),
-                        dcc.Tab(label='DeathsByRegion', value='DeathsByRegion'),
-                    ]
-                ),
+                html.Div(
+                    dcc.Graph(
+                        id='fig2',
+                        figure=deathsvstotaldeaths.DeathOverDeathFig,
+                        animate=False
+                    ),
+                    id='evolution-Graphs-content', className='shadow-5 pl-3'),
+                # dcc.Tabs(
+                #     id='evolution_Graphs', value='DeathsOverTotalDeaths', vertical=False,
+                #     children=[
+                #         dcc.Tab(label='DeathsOverTotalDeaths', value='DeathsOverTotalDeaths'),
+                #         dcc.Tab(label='DeathsByRegion', value='DeathsByRegion'),
+                #     ]
+                # ),
             ], className='pl-3')
         ], width=5, className="pt-2"),
-    ], className='pt-2')
+    ], className='pt-2'),
+    dbc.Row(
+        dbc.Col([
+            dbc.Row([
+                html.Div(
+                dcc.Graph(id='killsByRegion',
+                    config={'displayModeBar': False},
+                    animate=False,
+                    #responsive=True,
+                    figure=deathsvstotaldeaths.DeathsByRegion
+                          ),className='shadow-5'
+                )
+                ], className='pl-3'
+            )
+            ], className="pt-2"
+        )
+    )
+
+
 
 ],fluid=True)
 
-@app.callback(Output('evolution-Graphs-content', 'children'),
-              [Input('evolution_Graphs', 'value')])
-def render_content(tab):
-    if tab == 'DeathsOverTotalDeaths':
-        return dcc.Graph(
-                         id='fig2',
-                         figure=deathsvstotaldeaths.DeathOverDeathFig,
-                         animate=False
-                     )
-    elif tab == 'DeathsByRegion':
-        return dcc.Graph(id='killsByRegion',
-                   config={'displayModeBar': False},
-                   animate=False,
-                   figure=deathsvstotaldeaths.DeathsByRegion
-                          )
+# @app.callback(Output('evolution-Graphs-content', 'children'),
+#               [Input('evolution_Graphs', 'value')])
+# def render_content(tab):
+#     if tab == 'DeathsOverTotalDeaths':
+#         return dcc.Graph(
+#                          id='fig2',
+#                          figure=deathsvstotaldeaths.DeathOverDeathFig,
+#                          animate=False
+#                      )
+#     elif tab == 'DeathsByRegion':
+#         return dcc.Graph(id='killsByRegion',
+#                    config={'displayModeBar': False},
+#                    animate=False,
+#                    figure=deathsvstotaldeaths.DeathsByRegion
+#                           )
 
 # @app.callback([Output('mytree', 'figure')],
 #               [Input('year_slider', 'value')])

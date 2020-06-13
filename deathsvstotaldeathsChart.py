@@ -45,9 +45,9 @@ fig_dict = {
 fig_dict["layout"]["xaxis"] = {"range": [0, 5], "title": "Total deaths", "type": "log", "range": [-1, 5]}
 fig_dict["layout"]["yaxis"] = {"range": [0, 5],"title": "Deaths last year", "type": "log", "range": [-1, 5]}
 fig_dict["layout"]["hovermode"] = "closest"
-fig_dict["layout"]["template"] = 'plotly_dark'
+#fig_dict["layout"]["template"] = 'plotly_dark'
 fig_dict["layout"]["height"] = 600
-fig_dict["layout"]["width"] = 972
+fig_dict["layout"]["width"] = 957
 
 #fig_dict["layout"]["paper_bgcolor"] = 'rgba(0, 0, 0, 0)'
 #fig_dict["layout"]["plot_bgcolor"]= 'rgba(0, 0, 0, 0)'
@@ -188,7 +188,8 @@ DeathOverDeathFig = go.Figure(fig_dict)
 DeathOverDeathFig.update_layout(
     font=dict(
         family="Arial",
-        size=12
+        size=12,
+        color="white"
     ),
     margin=dict(
         l=0,
@@ -197,10 +198,11 @@ DeathOverDeathFig.update_layout(
         t=0,
         pad=0,
     ),
+
     plot_bgcolor='rgb(30,30,30)',
     paper_bgcolor='rgb(30,30,30)',
-    autosize=True,
-    width=970,
+    autosize=False,
+    width=950,
     height=500,
     title="Mortality trends by Region through time"
 )
@@ -223,12 +225,12 @@ DeathsByRegion.update_layout(
         l=0,
         r=0,
         b=0,
-        t=0,
+        t=50,
         pad=0,
     ),
     plot_bgcolor='rgb(30,30,30)',
     paper_bgcolor='rgb(30,30,30)',
-    autosize=True,
-    width=970,
+    autosize=False,
+    width = 1759,
     height=500,
 )
