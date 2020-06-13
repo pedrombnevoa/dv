@@ -64,18 +64,16 @@ sliders_dict = {
     "x": 0.1,
     "y": 0,
     "steps": [],
-    "tickcolor": "rgb(255,255,255)",
-    "font": {"family": "sans-serif", "color": "rgb(255,255,255)"}
+    "tickcolor": "#ededed",
+    "font": {"family": "sans-serif", "color": "#ededed"}
 }
 
-# data
 df_year = df[(df['year'] == 1970)]
 
 data_choropleth = dict(
     type='choropleth',
     name='',
     colorscale='amp',
-    #reversescale=True,
     locations=df_year['country'],
     z=np.log(df_year['count']),
     meta=df_year['nkill'],
@@ -89,7 +87,7 @@ data_choropleth = dict(
     locationmode='country names',
     colorbar=dict(
         outlinewidth=1,
-        outlinecolor='rgb(255,255,255)',
+        outlinecolor='#ededed',
         len=0.5,
         thickness=10,
         title=dict(
@@ -97,21 +95,20 @@ data_choropleth = dict(
             font=dict(
                 family='sans-serif',
                 size=14,
-                color='rgb(255,255,255)'
+                color='#ededed'
             ),
             side='right'
         ),
         tickfont=dict(
             family='sans-serif',
             size=12,
-            color='rgb(255,255,255)'
+            color='#ededed'
         ),
     )
 )
 
 fig_dict["data"].append(data_choropleth)
 
-# frames
 for year in years:
     frame = {"data": [], "name": str(year)}
 
@@ -123,7 +120,6 @@ for year in years:
         type='choropleth',
         name='',
         colorscale='amp',
-        #reversescale=True,
         locations=df_year1['country'],
         z=np.log(df_year1['count']),
         meta=df_year2['nkill'],
@@ -137,7 +133,7 @@ for year in years:
         locationmode='country names',
         colorbar=dict(
             outlinewidth=1,
-            outlinecolor='rgb(255,255,255)',
+            outlinecolor='#ededed',
             len=0.5,
             thickness=10,
             title=dict(
@@ -145,14 +141,14 @@ for year in years:
                 font=dict(
                     family='sans-serif',
                     size=14,
-                    color='rgb(255,255,255)'
+                    color='#ededed'
                 ),
                 side='right'
             ),
             tickfont=dict(
                 family='sans-serif',
                 size=12,
-                color='rgb(255,255,255)'
+                color='#ededed'
             ),
         )
     )
@@ -188,7 +184,7 @@ fig.update_layout(
         l=0,
         r=0,
         b=0,
-        t=0,
+        t=50,
         pad=0,
     ),template= 'plotly_dark',
     geo=dict(
@@ -204,7 +200,8 @@ fig.update_layout(
         showocean=True,
         oceancolor='rgba(0,0,0,0)',
         showframe=False,
-        framecolor='rgb(255, 255, 255)',
+        framecolor='#ededed',
         bgcolor='rgb(30,30,30)'
-    )
+    ),
+    title=dict(text='Attacks and fatalities around the world', font=dict(family='sans-serif', color='#ededed'), x=0)
 )

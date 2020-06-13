@@ -189,7 +189,7 @@ DeathOverDeathFig = go.Figure(fig_dict)
 
 DeathOverDeathFig.update_layout(
     font=dict(
-        family="Arial",
+        family="sans-serif",
         size=12,
         color="white"
     ),
@@ -207,7 +207,7 @@ DeathOverDeathFig.update_layout(
     width=950,
     height=500,
     title={
-        'text': "Mortality trends by Region through time",
+        'text': "Mortality trends by region through time",
         'y':0.93,
         'x':0,
         'xanchor': 'left',
@@ -219,7 +219,7 @@ DeathsByRegion = px.line(killsByRegionDF,
                         x='Year',
                         y='NumDeaths',
                         color='Region',
-                        title="Number of deaths by Region through time",
+                        title="Number of deaths by region through time",
                         template='plotly_dark')
 
 DeathsByRegion.update_layout(
@@ -229,9 +229,9 @@ DeathsByRegion.update_layout(
         size=12,
     ),
     margin=dict(
-        l=0,
-        r=0,
-        b=0,
+        l=50,
+        r=50,
+        b=50,
         t=50,
         pad=0,
     ),

@@ -13,9 +13,6 @@ import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
 import treemap as treemap
 
-
-
-
 app = dash.Dash(__name__, assets_folder='style',external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 
@@ -30,26 +27,25 @@ app.layout = dbc.Container([
         dbc.Col()
     ]),
 
-
-
     dbc.Row([
         dbc.Col([
             dbc.Row([
                 dcc.Markdown(
                     'This dashboard presents a comprehensive set of '
-                    'insights about Terrorism around the world and '
+                    'insights about terrorism around the world and '
                     'shows its evolution over the last decades, '
                     'regarding the most affected regions, the main '
                     'groups and organizations, the most used weapons '
                     'that were used and how many victims occurred '
                     'during these attacks.\n\n'
-                    'According to the FBI, Terrorism is "the unlawful '
+                    'According to the FBI, terrorism is "the unlawful '
                     'use of force or violence against persons or '
-                    'property to intimidate or coerce a Government, ' 
+                    'property to intimidate or coerce a government, ' 
                     'the civilian population, or any segment thereof, '
                     'in furtherance of political or social objectives.\n\n'
-                    'You can explore more of the Global Terrorism Database by visiting this [link](https://www.kaggle.com/START-UMD/gtd)'' \
-                    ', className='p-2 text-justify shadow-5')
+                    'You can explore more of the global terrorism database by visiting this [link]('
+                    'https://www.kaggle.com/START-UMD/gtd).'' \
+                    ', className='p-3 text-justify shadow-5 markdown')
             ], className='pl-3'),
 
             dbc.Row([
@@ -60,16 +56,16 @@ app.layout = dbc.Container([
                         id='year_slider',
                         min=1970,
                         max=2017,
-                        marks={1970: {'label': '1970', 'style': {'color': 'white'}},
-                               1975: {'label': '1975', 'style': {'color': 'white'}},
-                               1980: {'label': '1980', 'style': {'color': 'white'}},
-                               1985: {'label': '1985', 'style': {'color': 'white'}},
-                               1990: {'label': '1990', 'style': {'color': 'white'}},
-                               1995: {'label': '1995', 'style': {'color': 'white'}},
-                               2000: {'label': '2000', 'style': {'color': 'white'}},
-                               2005: {'label': '2005', 'style': {'color': 'white'}},
-                               2010: {'label': '2010', 'style': {'color': 'white'}},
-                               2017: {'label': '2017', 'style': {'color': 'white'}}},
+                        marks={1970: {'label': '1970', 'style': {'color': '#ededed'}},
+                               1975: {'label': '1975', 'style': {'color': '#ededed'}},
+                               1980: {'label': '1980', 'style': {'color': '#ededed'}},
+                               1985: {'label': '1985', 'style': {'color': '#ededed'}},
+                               1990: {'label': '1990', 'style': {'color': '#ededed'}},
+                               1995: {'label': '1995', 'style': {'color': '#ededed'}},
+                               2000: {'label': '2000', 'style': {'color': '#ededed'}},
+                               2005: {'label': '2005', 'style': {'color': '#ededed'}},
+                               2010: {'label': '2010', 'style': {'color': '#ededed'}},
+                               2017: {'label': '2017', 'style': {'color': '#ededed'}}},
                         value=1970,
                         step=1,
                         included=False,
@@ -103,24 +99,18 @@ app.layout = dbc.Container([
 
         dbc.Col([
             dbc.Row([
-                html.Div(
+                html.Div([
                     dcc.Graph(
                         id='fig2',
                         figure=deathsvstotaldeaths.DeathOverDeathFig,
                         animate=False
                     ),
-                    id='evolution-Graphs-content', className='shadow-5 pl-3'),
-                # dcc.Tabs(
-                #     id='evolution_Graphs', value='DeathsOverTotalDeaths', vertical=False,
-                #     children=[
-                #         dcc.Tab(label='DeathsOverTotalDeaths', value='DeathsOverTotalDeaths'),
-                #         dcc.Tab(label='DeathsByRegion', value='DeathsByRegion'),
-                #     ]
-                # ),
+                ], id='evolution-Graphs-content', className='shadow-5 pl-3'),
             ], className='pl-3')
-        ], width=5, className="pt-2"),
+        ], width=6, className="pt-2"),
     ], className='pt-2'),
-    dbc.Row(
+
+    dbc.Row([
         dbc.Col([
             dbc.Row([
                 html.Div(
@@ -135,42 +125,29 @@ app.layout = dbc.Container([
             )
             ], className="pt-2"
         )
-    )
+    ], className='pt-2'),
 
-
+    dbc.Row([
+        dbc.Col([
+            dbc.Row([
+                dcc.Markdown('Project by Pedro Névoa, Pedro Santos, Ricardo Cardoso, Vítor Fernandes (NOVA IMS '
+                             '2020)', className='p-2 text-right shadow-5 markdown')
+            ], className='pl-3')
+        ], className='pt-2')
+    ], className='pt-2 pb-3')
 
 ],fluid=True)
 
-# @app.callback(Output('evolution-Graphs-content', 'children'),
-#               [Input('evolution_Graphs', 'value')])
-# def render_content(tab):
-#     if tab == 'DeathsOverTotalDeaths':
-#         return dcc.Graph(
-#                          id='fig2',
-#                          figure=deathsvstotaldeaths.DeathOverDeathFig,
-#                          animate=False
-#                      )
-#     elif tab == 'DeathsByRegion':
-#         return dcc.Graph(id='killsByRegion',
-#                    config={'displayModeBar': False},
-#                    animate=False,
-#                    figure=deathsvstotaldeaths.DeathsByRegion
-#                           )
-
-# @app.callback([Output('mytree', 'figure')],
-#               [Input('year_slider', 'value')])
-# def update_graph(value):
-#     return treemap.getTreemap(value)
 @app.callback([Output('mytree', 'figure')],
               [Input('year_slider', 'value')])
 def update_graph(value):
     df_year = treemap.df.loc[treemap.df['year'] == value]
     fig = treemap.px.treemap(df_year,
-                     path=['year', 'weapon_type'],
-                     values='quantity', title='Type of Weapons Most Used',
-                     width=425, height=500,
-                     color='quantity',
-                     color_continuous_scale='amp'
+                    path=['year', 'weapon_type'],
+                    values='quantity',
+                    width=425, height=317,
+                    color='quantity',
+                    color_continuous_scale='amp'
                      )
 
     fig.update_layout(
@@ -180,12 +157,13 @@ def update_graph(value):
             l=0,
             r=0,
             b=0,
-            t=0,
+            t=50,
             pad=0,
         ),
         plot_bgcolor='rgb(30,30,30)',
-        paper_bgcolor='rgb(30,30,30)'
-        #colorscale=dict(sequential='amp')
+        paper_bgcolor='rgb(30,30,30)',
+        title = dict(text='Most used types of weapons',
+                 font=dict(color='#ededed', family='sans-serif'), x=0)
     )
 
     return [fig]

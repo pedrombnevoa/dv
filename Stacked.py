@@ -16,20 +16,20 @@ trace1 = go.Bar(
     x=AttacksOverKillsDF['Year'],
     y=AttacksOverKillsDF['Attacks'],
     name='Attacks',
-    marker_color='rgb(171, 171, 170)'
+    marker_color='rgb(60, 9, 17)'
 
 )
 trace2 = go.Bar(
     x=AttacksOverKillsDF['Year'],
     y=AttacksOverKillsDF['Kills'],
     name='Kills',
-    marker_color='rgb(179, 0, 0)'
+    marker_color='rgb(196, 102, 73)'
 )
 trace3 = go.Bar(
     x=AttacksOverKillsDF['Year'],
     y=AttacksOverKillsDF['Wounded'],
     name='Wounded',
-    marker_color='rgb(255, 255, 0)'
+    marker_color='rgb(241, 236, 236)'
 )
 
 annotations = [dict(
@@ -94,14 +94,36 @@ figure=go.Figure(
               layout=go.Layout(
                 xaxis_title="Year",
                 xaxis={'categoryorder':'category ascending'},
-                title_text='Balance of number of Kills, Wounded and Terrorist Attacks by Year',
-                title_xanchor='auto',
-                title_x=0.5,
+                title_text='Balance of number of kills, wounded and attacks by year',
+                # title_xanchor='auto',
+                # title_x=0.05,
+                # title_y=3,
                 barmode='stack',
                 annotations=annotations + annotations2,
                 template='plotly_dark',
-                width=750,
+                width=775,
                 height=500,
               )
                 )
+
+figure.update_layout(
+    paper_bgcolor='rgba(0,0,0,0)',
+    plot_bgcolor='rgba(0,0,0,0)',
+    font = dict(
+        family='sans-serif',
+        size=12),
+    margin=dict(
+        l=50,
+        r=50,
+        b=10,
+        t=75,
+        pad=0),
+    title={
+            'text': "Balance of number of kills, wounded and attacks by year",
+            'y': 0.93,
+            'x': 0.05,
+            'xanchor': 'left',
+            'yanchor': 'top'}
+
+)
 
