@@ -6,22 +6,13 @@ import dash_core_components as dcc
 import dash_html_components as html
 import os
 
-
-
 killsByRegionDFPath = os.getcwd() + '\GroupedYearRegionKills.csv'
-
 columnskillsByRegion = ['Region','Year','NumDeaths']
-#Region,Year,NumDeaths
 killsByRegionDF = pd.read_csv(killsByRegionDFPath, encoding='ISO-8859-1', usecols=columnskillsByRegion)
 
-
-
 RegionYearAttackDeathsPath = os.getcwd() + '\RegionYearDeathsDeathsCom.csv'
-
 columnsRegionYearAttackDeaths = ['Region','Year','NumDeathsPerYear','NumDeathsComul','NumAttack']
-
 RegionYearAttackDeathsDF = pd.read_csv(RegionYearAttackDeathsPath, encoding='ISO-8859-1', usecols=columnsRegionYearAttackDeaths)
-
 
 years = ["1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979",
          "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989",
@@ -29,29 +20,23 @@ years = ["1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978",
         "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009",
         "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017"]
 
-# make list of regions
 regions = []
 for region in RegionYearAttackDeathsDF["Region"]:
     if region not in regions:
         regions.append(region)
-# make figure
+
 fig_dict = {
     "data": [],
     "layout": {},
     "frames": []
 }
 
-# fill in most of layout
 fig_dict["layout"]["xaxis"] = {"range": [0, 5], "title": "Total deaths", "type": "log", "range": [-1, 5]}
 fig_dict["layout"]["yaxis"] = {"range": [0, 5],"title": "Deaths last year", "type": "log", "range": [-1, 5]}
 fig_dict["layout"]["hovermode"] = "closest"
 fig_dict["layout"]["template"] = 'plotly_dark'
 fig_dict["layout"]["height"] = 600
 fig_dict["layout"]["width"] = 957
-
-#fig_dict["layout"]["paper_bgcolor"] = 'rgba(0, 0, 0, 0)'
-#fig_dict["layout"]["plot_bgcolor"]= 'rgba(0, 0, 0, 0)'
-
 
 fig_dict["layout"]["updatemenus"] = [
     {
@@ -112,7 +97,6 @@ fig_dict["layout"]["updatemenus"] = [
     }
 ]
 
-
 sliders_dict = {
     "active": 0,
     "yanchor": "top",
@@ -131,7 +115,6 @@ sliders_dict = {
     "steps": []
 }
 
-# primeiro ano
 year = 1970
 for region in regions:
     dataset_by_year = RegionYearAttackDeathsDF[RegionYearAttackDeathsDF["Year"] == year]
@@ -150,7 +133,6 @@ for region in regions:
     }
     fig_dict["data"].append(data_dict)
 
-# restantes anos
 for year in years:
     frame = {"data": [], "name": str(year)}
     for region in regions:
@@ -213,7 +195,6 @@ DeathOverDeathFig.update_layout(
         'xanchor': 'left',
         'yanchor': 'top'}
 )
-
 
 DeathsByRegion = px.line(killsByRegionDF,
                         x='Year',

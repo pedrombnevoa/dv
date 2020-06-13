@@ -9,7 +9,7 @@ body {
 .fit-image{
 width: 100%;
 object-fit: cover;
-height: 300px; /* only if you want fixed height */
+height: 300px;
 align-items: top;
 }
 
@@ -31,9 +31,3 @@ a:link {
     font-family: sans-serif;
     font-size: 0.9rem;
 }
-
-/*
-.sansserif {
-  font-family: Arial, Helvetica, sans-serif;
-}
-*/
