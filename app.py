@@ -130,7 +130,7 @@ app.layout = dbc.Container([
     dbc.Row([
         dbc.Col([
             dbc.Row([
-                dcc.Markdown('Project by Pedro Névoa, Pedro Santos, Ricardo Cardoso, Vítor Fernandes (NOVA IMS '
+                dcc.Markdown('Project by Pedro Névoa, Pedro Santos, Ricardo Cardoso, Vítor Miguel Fernandes (NOVA IMS '
                              '2020)', className='p-2 text-right shadow-5 markdown')
             ], className='pl-3')
         ], className='pt-2')
