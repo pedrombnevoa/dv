@@ -185,7 +185,7 @@ DeathOverDeathFig.update_layout(
     plot_bgcolor='rgb(30,30,30)',
     paper_bgcolor='rgb(30,30,30)',
     autosize=False,
-    width=950,
+    width=739,
     height=500,
     title={
         'text': "Mortality trends by region through time",
@@ -218,6 +218,6 @@ DeathsByRegion.update_layout(
     plot_bgcolor='rgb(30,30,30)',
     paper_bgcolor='rgb(30,30,30)',
     autosize=False,
-    width = 1759,
+    width = 1387,
     height=500,
 )

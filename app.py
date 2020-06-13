@@ -143,7 +143,7 @@ def update_graph(value):
     fig = treemap.px.treemap(df_year,
                     path=['year', 'weapon_type'],
                     values='quantity',
-                    width=425, height=317,
+                    width=330, height=245,
                     color='quantity',
                     color_continuous_scale='amp'
                      )

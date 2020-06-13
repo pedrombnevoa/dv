@@ -14,7 +14,7 @@ df = df[df['weapon_type'] != 'Unknown']
 fig = px.treemap(df_year,
                  path=['year', 'weapon_type'],
                  values='quantity', #title='Teste',
-                 width=425, height=317,
+                 width=330, height=245,
                  color='quantity',
                  color_continuous_scale='amp'
                  )

@@ -178,7 +178,7 @@ fig.update_layout(
     autosize=False,
     paper_bgcolor='rgba(0,0,0,0)',
     plot_bgcolor='rgba(0,0,0,0)',
-    width=1250,
+    width=975,
     height=685,
     margin=dict(
         l=0,

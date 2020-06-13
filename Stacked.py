@@ -98,7 +98,7 @@ figure=go.Figure(
                 barmode='stack',
                 annotations=annotations + annotations2,
                 template='plotly_dark',
-                width=775,
+                width=615,
                 height=500,
               )
                 )
