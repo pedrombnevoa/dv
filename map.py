@@ -1,7 +1,6 @@
 import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
-import os
 import numpy as np
 
 ds = 'https://raw.githubusercontent.com/pedrombnevoa/dv/master/gt_country_year_nkill_count.csv'

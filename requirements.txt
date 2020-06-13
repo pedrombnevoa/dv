@@ -5,6 +5,5 @@ dash
 dash_renderer
 dash-html-components
 dash-core-components
-os
 numpy
 dash_bootstrap_components

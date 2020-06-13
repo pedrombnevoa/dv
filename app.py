@@ -4,7 +4,6 @@ import plotly.express as px
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
-import os
 import Stacked as stacked
 import numpy as np
 import map as map

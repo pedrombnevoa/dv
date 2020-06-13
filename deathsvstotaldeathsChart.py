@@ -4,7 +4,6 @@ import plotly.express as px
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
-import os
 
 killsByRegionDFPath = 'https://raw.githubusercontent.com/pedrombnevoa/dv/master/GroupedYearRegionKills.csv'
 columnskillsByRegion = ['Region','Year','NumDeaths']
