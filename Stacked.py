@@ -92,12 +92,16 @@ annotations2 = [dict(
 figure=go.Figure(
               data=[trace1, trace2, trace3],
               layout=go.Layout(
-              xaxis_title="Year",
-              xaxis={'categoryorder':'category ascending'},
-              title_text='Balance of number of Kills, Wounded and Terrorist Attacks by Year',
-              title_xanchor='auto',
-              title_x=0.5,
-              barmode='stack',
-              annotations=annotations + annotations2,
-              template='plotly_dark'))
+                xaxis_title="Year",
+                xaxis={'categoryorder':'category ascending'},
+                title_text='Balance of number of Kills, Wounded and Terrorist Attacks by Year',
+                title_xanchor='auto',
+                title_x=0.5,
+                barmode='stack',
+                annotations=annotations + annotations2,
+                template='plotly_dark',
+                width=750,
+                height=500,
+              )
+                )
 

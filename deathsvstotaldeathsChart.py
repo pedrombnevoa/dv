@@ -46,7 +46,8 @@ fig_dict["layout"]["xaxis"] = {"range": [0, 5], "title": "Total deaths", "type":
 fig_dict["layout"]["yaxis"] = {"range": [0, 5],"title": "Deaths last year", "type": "log", "range": [-1, 5]}
 fig_dict["layout"]["hovermode"] = "closest"
 fig_dict["layout"]["template"] = 'plotly_dark'
-fig_dict["layout"]["height"] = 700
+fig_dict["layout"]["height"] = 500
+fig_dict["layout"]["width"] = 850
 
 #fig_dict["layout"]["paper_bgcolor"] = 'rgba(0, 0, 0, 0)'
 #fig_dict["layout"]["plot_bgcolor"]= 'rgba(0, 0, 0, 0)'

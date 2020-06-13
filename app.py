@@ -20,70 +20,91 @@ app = dash.Dash(__name__, assets_folder='style',external_stylesheets=[dbc.themes
 server = app.server
 
 app.layout = dbc.Container([
-    html.H1("Terrorism around the world (1970-2017)", className="w-100 p-3 text-left"),
-    #dbc.Row(dbc.Col(html.Div("Start"),width={"size": 12, "offset": 0})),
-    dbc.Row(
-        [
-            dbc.Col([
-                dbc.Row(
-                    html.P( "text text text text text text text text text text text text text text text text text"
-                            " text text text text text text text text text text text text text text text text text text"
-                            " text text text text text text text text text text text text text text text text text text"
-                            " text text text text text text text text text text text text text text text text text text"
-                            " text text text text text text text text text text text text text text text text text text"
-                            " text text text text text text text text text text text text text text text text text text"
-                            " text text text text text text text text text text text text text text text text text text"
-                            " text text text text text text text text text text", className="p-4 text-justify"),
-                ),
-                dbc.Row(
-                    html.Div([
 
-                        dcc.Graph(figure=treemap.getTreemap(), id='mytree', className="p-3"),
+    dbc.Row([
+        dbc.Col([
+            dbc.Row([
+                html.H1("Terrorism around the world (1970-2017)", className="w-100 p-3 text-left shadow-5"),
+            ], className="pt-3 pl-3"),
+        ], width='auto'),
+        dbc.Col()
+    ]),
 
-                        html.Label('Year'),
-                        dcc.Slider(
-                            id='year_slider',
-                            min=1970,
-                            max=2017,
-                            marks={1970: '1970', 1975: '1975', 1980: '1980', 1985: '1985', 1990: '1990', 1995: '1995',
-                                   2000: '2000', 2005: '2005', 2010: '2010', 2017: '2017'},
-                            value=1970,
-                            step=1,
-                            included=False,
-                            className='p-3'
-                        ),
-                    ])
-                )
-            ], width=3, className="p-4"),
-            dbc.Col(
-                 dcc.Graph(
-                     id='fig',
-                     figure=map.fig
-                 )
-            ,width=9)
-        ]
-        ),
-    dbc.Row(
-        [
-            #dbc.Col(dcc.Graph(figure=treemap.fig, id='mytree'), width=3),
-            dbc.Col([
-                dbc.Row(
-                    dcc.Graph(id='bar_plot',figure=stacked.figure)
-                ),
-                dbc.Row([
-                     html.Div(id='evolution-Graphs-content'),
-                     dcc.Tabs(id='evolution_Graphs', value='DeathsOverTotalDeaths', vertical=True, children=[
-                         dcc.Tab(label='DeathsOverTotalDeaths', value='DeathsOverTotalDeaths'),
-                         dcc.Tab(label='DeathsByRegion', value='DeathsByRegion'),
-                         ]),
+    dbc.Row([
+        dbc.Col([
+            dbc.Row([
+                dcc.Markdown('This dashboard offers a comprehensive insight into the numbers of terrorism around '
+                            'the world. text text text text text text text text text text text text text text ['
+                             'link](https://www.kaggle.com/START-UMD/gtd) text text text text text text text text '
+                             'text text text text text text text text text text text text text text text text'
+                             ' text text text text text text text text text text text text text text text text '
+                             'text text ', className='p-2 text-justify shadow-5')
+            ], className='pl-3'),
 
-                    ])
-                ], width=9
+            dbc.Row([
+                html.Div([
+                    dcc.Graph(figure=treemap.fig, id='mytree'),
+
+                    dcc.Slider(
+                        id='year_slider',
+                        min=1970,
+                        max=2017,
+                        marks={1970: {'label': '1970', 'style': {'color': 'white'}},
+                               1975: {'label': '1975', 'style': {'color': 'white'}},
+                               1980: {'label': '1980', 'style': {'color': 'white'}},
+                               1985: {'label': '1985', 'style': {'color': 'white'}},
+                               1990: {'label': '1990', 'style': {'color': 'white'}},
+                               1995: {'label': '1995', 'style': {'color': 'white'}},
+                               2000: {'label': '2000', 'style': {'color': 'white'}},
+                               2005: {'label': '2005', 'style': {'color': 'white'}},
+                               2010: {'label': '2010', 'style': {'color': 'white'}},
+                               2017: {'label': '2017', 'style': {'color': 'white'}}},
+                        value=1970,
+                        step=1,
+                        included=False,
+                        className='w-100'
+                    ),
+                ], className='p-3 shadow-5')
+            ], className='pl-3 pt-3')
+
+        ], width=3, className="pt-2"),
+
+        dbc.Col(
+            dbc.Row([
+                html.Div([
+                    dcc.Graph(
+                        id='fig',
+                        figure=map.fig,
+                    )
+                ], className='p-3 shadow-5')
+            ], className='pl-3')
+        ,width=9, className="pt-2")
+    ]),
+
+    dbc.Row([
+        dbc.Col([
+            dbc.Row([
+                html.Div([
+                    dcc.Graph(id='bar_plot', figure=stacked.figure)
+                ], className='shadow-5')
+            ], className='pl-3'),
+        ], width=5, className="pt-2"),
+
+        dbc.Col([
+            dbc.Row([
+                html.Div(id='evolution-Graphs-content'),
+                dcc.Tabs(
+                    id='evolution_Graphs', value='DeathsOverTotalDeaths', vertical=True,
+                    children=[
+                        dcc.Tab(label='DeathsOverTotalDeaths', value='DeathsOverTotalDeaths'),
+                        dcc.Tab(label='DeathsByRegion', value='DeathsByRegion'),
+                    ]
                 ),
-            ],no_gutters=True,
-        )
-    ]
-    ,fluid=True)
+            ], className='pl-3')
+        ], width=5, className="pt-2"),
+    ], className='pt-2')
+
+],fluid=True)
 
 @app.callback(Output('evolution-Graphs-content', 'children'),
               [Input('evolution_Graphs', 'value')])
@@ -105,10 +126,38 @@ def render_content(tab):
                                   template='plotly_dark')
                           )
 
+# @app.callback([Output('mytree', 'figure')],
+#               [Input('year_slider', 'value')])
+# def update_graph(value):
+#     return treemap.getTreemap(value)
 @app.callback([Output('mytree', 'figure')],
               [Input('year_slider', 'value')])
 def update_graph(value):
-    return treemap.getTreemap(value)
+    df_year = treemap.df.loc[treemap.df['year'] == value]
+    fig = treemap.px.treemap(df_year,
+                     path=['year', 'weapon_type'],
+                     values='quantity', title='Type of Weapons Most Used',
+                     width=425, height=500,
+                     color='quantity',
+                     color_continuous_scale='amp'
+                     )
+
+    fig.update_layout(
+        coloraxis=dict(showscale=False),
+        font_family="Arial",
+        margin=dict(
+            l=0,
+            r=0,
+            b=0,
+            t=0,
+            pad=0,
+        ),
+        plot_bgcolor='rgb(30,30,30)',
+        paper_bgcolor='rgb(30,30,30)'
+        #colorscale=dict(sequential='amp')
+    )
+
+    return [fig]
 
 if __name__ == '__main__':
     app.run_server(debug=True)
