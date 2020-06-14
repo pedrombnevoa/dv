@@ -14,6 +14,7 @@ import treemap as treemap
 
 app = dash.Dash(__name__, assets_folder='style',external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
+app.title = 'Terrorism around the world'
 
 app.layout = dbc.Container([
 
