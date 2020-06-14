@@ -14,7 +14,8 @@ df = df[df['weapon_type'] != 'Unknown']
 fig = px.treemap(df_year,
                  path=['year', 'weapon_type'],
                  values='quantity', #title='Teste',
-                 width=330, height=245,
+                 width=330,
+                 height=245,
                  color='quantity',
                  color_continuous_scale='amp'
                  )
@@ -29,6 +30,8 @@ fig.update_layout(
         t=50,
         pad=0,
     ),
+    autosize=True,
+    template='plotly_dark',
     plot_bgcolor='rgb(30,30,30)',
     paper_bgcolor='rgb(30,30,30)',
     title=dict(text='Most used types of weapons',

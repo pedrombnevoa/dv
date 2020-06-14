@@ -13,7 +13,7 @@ trace1 = go.Bar(
     x=AttacksOverKillsDF['Year'],
     y=AttacksOverKillsDF['Attacks'],
     name='Attacks',
-    marker_color='rgb(60, 9, 17)'
+    marker_color='rgb(149, 19, 39)'
 
 )
 trace2 = go.Bar(
@@ -98,8 +98,8 @@ figure=go.Figure(
                 barmode='stack',
                 annotations=annotations + annotations2,
                 template='plotly_dark',
-                width=615,
-                height=500,
+                # width=615,
+                # height=500,
               )
                 )
 
@@ -115,10 +115,11 @@ figure.update_layout(
         b=10,
         t=75,
         pad=0),
+    autosize=True,
     title={
             'text': "Balance of number of kills, wounded and attacks by year",
-            'y': 0.93,
-            'x': 0.05,
+            'y': 0.97,
+            'x': 0,
             'xanchor': 'left',
             'yanchor': 'top'}
 

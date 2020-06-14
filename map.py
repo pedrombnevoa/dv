@@ -175,11 +175,11 @@ fig.update_layout(
         family='sans-serif',
         size=12
     ),
-    autosize=False,
+    autosize=True,
     paper_bgcolor='rgba(0,0,0,0)',
     plot_bgcolor='rgba(0,0,0,0)',
-    width=975,
-    height=685,
+    #width=975,
+    #height=663,
     margin=dict(
         l=0,
         r=0,

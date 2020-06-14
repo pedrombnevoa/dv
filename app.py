@@ -19,22 +19,19 @@ app.layout = dbc.Container([
 
     dbc.Row([
         dbc.Col([
-            dbc.Row([
-                html.H1("Terrorism around the world (1970-2017)", className="w-100 p-3 text-left shadow-5"),
-            ], className="pt-3 pl-3"),
-        ], width='auto'),
-        dbc.Col()
-    ]),
+                html.H1("Terrorism around the world (1970-2017)"),
+        ], width='auto', className="p-3 text-left align-middle box"),
+    ], className='pt-3'),
 
     dbc.Row([
         dbc.Col([
+
             dbc.Row([
                 dcc.Markdown(
                     'This dashboard presents a comprehensive set of '
                     'insights about terrorism around the world and '
                     'shows its evolution over the last decades, '
-                    'regarding the most affected regions, the main '
-                    'groups and organizations, the most used weapons '
+                    'regarding the most affected regions, the most used weapons '
                     'that were used and how many victims occurred '
                     'during these attacks.\n\n'
                     'According to the FBI, terrorism is "the unlawful '
@@ -43,12 +40,12 @@ app.layout = dbc.Container([
                     'the civilian population, or any segment thereof, '
                     'in furtherance of political or social objectives.\n\n'
                     'You can explore more of the global terrorism database by visiting this [link]('
-                    'https://www.kaggle.com/START-UMD/gtd).'' \
-                    ', className='p-3 text-justify shadow-5 markdown')
-            ], className='pl-3'),
+                    'https://www.kaggle.com/START-UMD/gtd).')
+            ], className='pl-4 pt-4 pr-4 pb-2 text-justify box markdown'),
+
+            dbc.Row([], className='pt-2'),
 
             dbc.Row([
-                html.Div([
                     dcc.Graph(figure=treemap.fig, id='mytree'),
 
                     dcc.Slider(
@@ -70,71 +67,57 @@ app.layout = dbc.Container([
                         included=False,
                         className='w-100'
                     ),
-                ], className='p-3 shadow-5')
-            ], className='pl-3 pt-3')
+            ], className='p-3 box'),
 
-        ], width=3, className="pt-2"),
+            dbc.Row([], className='pt-2'),
 
-        dbc.Col(
             dbc.Row([
-                html.Div([
-                    dcc.Graph(
-                        id='fig',
-                        figure=map.fig,
-                    )
-                ], className='p-3 shadow-5')
-            ], className='pl-3')
-        ,width=9, className="pt-2")
+                dcc.Markdown(
+                    'Project by Pedro Névoa, Pedro Santos, Ricardo Cardoso, Vítor Miguel Fernandes (NOVA IMS 2020)')
+            ], className='pl-4 pt-4 pr-4 pb-2 text-justify box markdown2')
+
+        ], width=4, className="pt-2"),
+
+        dbc.Col([
+            dbc.Row([
+                dcc.Graph(
+                    id='fig',
+                    figure=map.fig,
+                )
+            ], className='p-3 box'),
+
+            dbc.Row([], className='pt-2'),
+
+            dbc.Row([
+                dcc.Graph(id='bar_plot', figure=stacked.figure)
+            ], className='p-3 box'),
+
+            dbc.Row([], className='pt-2'),
+
+            dbc.Row([
+                dcc.Graph(
+                    id='fig2',
+                    figure=deathsvstotaldeaths.DeathOverDeathFig,
+                    animate=False
+                ),
+            ], className='p-3 box'),
+
+            dbc.Row([], className='pt-2'),
+
+            dbc.Row([
+                dcc.Graph(id='killsByRegion',
+                          config={'displayModeBar': False},
+                          animate=False,
+                          figure=deathsvstotaldeaths.DeathsByRegion
+                          )
+            ], className='p-3 box'),
+
+            dbc.Row([], className='pt-2')
+
+        ] ,width=8, className="pl-4 pt-2")
     ]),
 
-    dbc.Row([
-        dbc.Col([
-            dbc.Row([
-                html.Div([
-                    dcc.Graph(id='bar_plot', figure=stacked.figure)
-                ], className='shadow-5')
-            ], className='pl-3'),
-        ], width=5, className="pt-2"),
-
-        dbc.Col([
-            dbc.Row([
-                html.Div([
-                    dcc.Graph(
-                        id='fig2',
-                        figure=deathsvstotaldeaths.DeathOverDeathFig,
-                        animate=False
-                    ),
-                ], id='evolution-Graphs-content', className='shadow-5 pl-3'),
-            ], className='pl-3')
-        ], width=6, className="pt-2"),
-    ], className='pt-2'),
-
-    dbc.Row([
-        dbc.Col([
-            dbc.Row([
-                html.Div(
-                dcc.Graph(id='killsByRegion',
-                    config={'displayModeBar': False},
-                    animate=False,
-                    figure=deathsvstotaldeaths.DeathsByRegion
-                          ),className='shadow-5'
-                )
-                ], className='pl-3'
-            )
-            ], className="pt-2"
-        )
-    ], className='pt-2'),
-
-    dbc.Row([
-        dbc.Col([
-            dbc.Row([
-                dcc.Markdown('Project by Pedro Névoa, Pedro Santos, Ricardo Cardoso, Vítor Miguel Fernandes (NOVA IMS '
-                             '2020)', className='p-2 text-right shadow-5 markdown')
-            ], className='pl-3')
-        ], className='pt-2')
-    ], className='pt-2 pb-3')
-
-],fluid=True)
+],fluid=False)
 
 @app.callback([Output('mytree', 'figure')],
               [Input('year_slider', 'value')])
@@ -143,7 +126,8 @@ def update_graph(value):
     fig = treemap.px.treemap(df_year,
                     path=['year', 'weapon_type'],
                     values='quantity',
-                    width=330, height=245,
+                     width=330,
+                     height=245,
                     color='quantity',
                     color_continuous_scale='amp'
                      )
@@ -158,6 +142,7 @@ def update_graph(value):
             t=50,
             pad=0,
         ),
+        autosize=True,
         plot_bgcolor='rgb(30,30,30)',
         paper_bgcolor='rgb(30,30,30)',
         title = dict(text='Most used types of weapons',

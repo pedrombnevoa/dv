@@ -124,7 +124,7 @@ for region in regions:
         "x": list(dataset_by_year_and_reg["NumDeathsComul"]),
         "y": list(dataset_by_year_and_reg["NumDeathsPerYear"]),
         "mode": 'lines+markers',
-        "text": list(dataset_by_year_and_reg["Region"]),
+        "text": list(dataset_by_year_and_reg["Year"]),
         "line": {
 
         },
@@ -143,7 +143,7 @@ for year in years:
             "x": list(dataset_by_year_and_reg["NumDeathsComul"]),
             "y": list(dataset_by_year_and_reg["NumDeathsPerYear"]),
             "mode": 'lines',
-            "text": list(dataset_by_year_and_reg["Region"]),
+            "text": list(dataset_by_year_and_reg["Year"]),
             "line": {
 
 
@@ -184,12 +184,12 @@ DeathOverDeathFig.update_layout(
 
     plot_bgcolor='rgb(30,30,30)',
     paper_bgcolor='rgb(30,30,30)',
-    autosize=False,
-    width=739,
+    autosize=True,
+    width=725,
     height=500,
     title={
         'text': "Mortality trends by region through time",
-        'y':0.93,
+        'y':0.97,
         'x':0,
         'xanchor': 'left',
         'yanchor': 'top'}
@@ -217,7 +217,13 @@ DeathsByRegion.update_layout(
     ),
     plot_bgcolor='rgb(30,30,30)',
     paper_bgcolor='rgb(30,30,30)',
-    autosize=False,
-    width = 1387,
-    height=500,
+    autosize=True,
+    # width = 1387,
+    # height=500,
+    title={
+        'text': "Number of deaths by region through time",
+        'y': 0.97,
+        'x': 0,
+        'xanchor': 'left',
+        'yanchor': 'top'}
 )
